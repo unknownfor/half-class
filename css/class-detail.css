@@ -2,8 +2,9 @@ body {
   margin: 0 auto;
   padding: 0;
   max-width: 700px;
-  background-color: #f2f2f2;
+  background-color: #f5f5f5;
   overflow-x: hidden;
+  word-wrap: break-word;
 }
 .container {
   font-size: 14px;
@@ -105,15 +106,46 @@ body {
 }
 .address-box {
   display: flex;
+  width: 100%;
 }
-.address-box .address-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.address-box .address {
+  display: inline-block;
+}
+.address-box .address .address-img {
+  position: absolute;
   height: 24px;
   width: 20px;
   background: url("../img/sprite.png") no-repeat;
   background-position: -61px 0px;
   background-size: 79px 33px;
-  margin-right: 8px;
+}
+.address-box .address .address-detail {
+  display: inline-block;
+  margin-left: 25px;
+}
+.address-box .address-call {
+  height: 100%;
+  display: inline-block;
+  border-left: 1px solid #f2f2f2;
+}
+.address-box .address-call a {
+  display: block;
+}
+.address-box .address-call #address-call-box {
+  width: 80px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.address-box .address-call #address-call-box #img {
+  width: 33px;
+  height: 33px;
+  background: url("../img/sprite.png") no-repeat;
+  background-size: 79px 33px;
+  background-position: 1px 0px;
+  margin-right: 13px;
+}
+.class-info > img {
+  max-width: 100%;
 }
