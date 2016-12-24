@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53ad3ca2-340d-41be-9618-78f954522788" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/class-rule.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/class-detail.css" afterPath="$PROJECT_DIR$/css/class-detail.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/class-detail.less" afterPath="$PROJECT_DIR$/css/class-detail.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/class-detail.html" afterPath="$PROJECT_DIR$/index/class-detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/class-rule.css" afterPath="$PROJECT_DIR$/css/class-rule.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/class-rule.less" afterPath="$PROJECT_DIR$/css/class-rule.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/class-rule.html" afterPath="$PROJECT_DIR$/index/class-rule.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -31,9 +29,16 @@
       <file leaf-file-name="class-rule.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index/class-rule.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="516">
-              <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="400">
+              <caret line="37" column="24" lean-forward="false" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+              <folding>
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#ul#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -41,13 +46,19 @@
       <file leaf-file-name="class-rule.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/class-rule.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="42" column="7" lean-forward="true" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
+            <state relative-caret-position="435">
+              <caret line="95" column="30" lean-forward="false" selection-start-line="95" selection-start-column="30" selection-end-line="95" selection-end-column="30" />
               <folding>
-                <element signature="e#138#156#0" expanded="false" />
-                <element signature="e#160#190#0" expanded="false" />
-                <element signature="e#292#594#0" expanded="false" />
-                <element signature="e#785#819#0" expanded="false" />
+                <element signature="e#157#175#0" expanded="false" />
+                <element signature="e#179#209#0" expanded="false" />
+                <element signature="e#219#1744#0" expanded="false" />
+                <element signature="e#628#1355#0" expanded="false" />
+                <element signature="e#683#966#0" expanded="false" />
+                <element signature="e#980#1089#0" expanded="false" />
+                <element signature="e#1101#1141#0" expanded="false" />
+                <element signature="e#1365#1636#0" expanded="false" />
+                <element signature="e#2064#3424#0" expanded="false" />
+                <element signature="e#3363#3418#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -110,7 +121,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -185,6 +195,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -274,17 +285,18 @@
       <workItem from="1482370151882" duration="6360000" />
       <workItem from="1482389057025" duration="13090000" />
       <workItem from="1482456239823" duration="22269000" />
+      <workItem from="1482542922181" duration="20152000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64937000" />
+    <option name="totallyTimeSpent" value="85089000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1064" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1384778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13794926" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -313,6 +325,40 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index/class-rule.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ul#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/class-rule.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#157#175#0" expanded="false" />
+            <element signature="e#179#209#0" expanded="false" />
+            <element signature="e#219#1744#0" expanded="false" />
+            <element signature="e#628#1355#0" expanded="false" />
+            <element signature="e#683#966#0" expanded="false" />
+            <element signature="e#980#1089#0" expanded="false" />
+            <element signature="e#1101#1141#0" expanded="false" />
+            <element signature="e#1365#1636#0" expanded="false" />
+            <element signature="e#2064#3424#0" expanded="false" />
+            <element signature="e#3363#3418#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index/class-detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -373,14 +419,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/class-detail.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="108" column="5" lean-forward="true" selection-start-line="99" selection-start-column="4" selection-end-line="108" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index/class-detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="14" column="48" lean-forward="false" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+        <state relative-caret-position="261">
+          <caret line="9" column="57" lean-forward="true" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -390,31 +443,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/class-detail.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="6" selection-end-column="23" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/img/class-rule/bg_2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/class-rule/sprite.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index/class-rule.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="400">
+          <caret line="37" column="24" lean-forward="false" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ul#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/class-rule.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="42" column="7" lean-forward="true" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
+        <state relative-caret-position="435">
+          <caret line="95" column="30" lean-forward="false" selection-start-line="95" selection-start-column="30" selection-end-line="95" selection-end-column="30" />
           <folding>
-            <element signature="e#138#156#0" expanded="false" />
-            <element signature="e#160#190#0" expanded="false" />
-            <element signature="e#292#594#0" expanded="false" />
-            <element signature="e#785#819#0" expanded="false" />
+            <element signature="e#157#175#0" expanded="false" />
+            <element signature="e#179#209#0" expanded="false" />
+            <element signature="e#219#1744#0" expanded="false" />
+            <element signature="e#628#1355#0" expanded="false" />
+            <element signature="e#683#966#0" expanded="false" />
+            <element signature="e#980#1089#0" expanded="false" />
+            <element signature="e#1101#1141#0" expanded="false" />
+            <element signature="e#1365#1636#0" expanded="false" />
+            <element signature="e#2064#3424#0" expanded="false" />
+            <element signature="e#3363#3418#0" expanded="false" />
           </folding>
         </state>
       </provider>

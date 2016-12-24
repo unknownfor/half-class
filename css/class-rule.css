@@ -5,6 +5,7 @@ body {
   background-color: #f5f5f5;
   overflow-x: hidden;
   word-wrap: break-word;
+  font-size: 14px;
 }
 img {
   width: 100%;
@@ -21,7 +22,7 @@ ul {
 }
 .process #process-title {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 .process #process-title #process-title-img {
   display: inline-block;
@@ -32,18 +33,120 @@ ul {
   background-position: 0px -154px;
 }
 .process .process-li {
-  margin-left: 46px;
+  margin: 0px 46px;
+  display: table;
 }
 .process .process-li .number {
-  margin-right: 8px;
-  margin-bottom: 8px;
+  vertical-align: middle;
+  margin: 8px 8px 8px 0px;
   width: 30px;
   height: 30px;
   border-radius: 30px;
+  color: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
-.process .process-li .number:first-child {
-  margin-top: 0px;
+.process .process-li .number > span {
+  line-height: 30px;
+}
+.process .process-li .express {
+  color: #383D43;
+  display: table-cell;
+  vertical-align: middle;
+  line-height: 22px;
 }
 .process .process-li #first {
   background-color: #FAB737;
+}
+.process .process-li #second {
+  background-color: #FFEB3B;
+}
+.process .process-li #third {
+  background-color: #4A90E2;
+}
+.process .process-li #fourth {
+  background-color: #76D1EE;
+}
+.process .process-li #fifth {
+  background-color: #FA4535;
+}
+.process .arrow {
+  display: inline-block;
+}
+.process .arrow .arrow-img {
+  width: 19px;
+  height: 29px;
+  margin-left: 5px;
+  background: url("../img/class-rule/sprite.png") no-repeat;
+  background-size: 142.1px 151.9px;
+  background-position: -125px -123px;
+}
+.process .remind {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #9B9B9B;
+  line-height: 22px;
+}
+.middle {
+  margin-left: 23px;
+  margin-bottom: 26px;
+  position: relative;
+  z-index: 20;
+  background-image: url("../img/class-rule/bg_2.png");
+  background-repeat: no-repeat;
+}
+.middle > p {
+  line-height: 22px;
+}
+.txt {
+  margin: 24px 25px 0px 25px;
+  color: #383D43;
+}
+.txt .txt-box {
+  margin-bottom: 24px;
+}
+.txt .txt-box .txt-box-head {
+  margin-bottom: 6px;
+  display: table;
+}
+.txt .txt-box .txt-box-head .txt-title {
+  font-weight: bold;
+  padding-left: 6px;
+  line-height: 26px;
+}
+.txt .txt-box .txt-box-head #quality {
+  display: table-cell;
+  height: 24px;
+  width: 31px;
+  background: url("../img/class-rule/sprite.png") no-repeat;
+  background-position: -72px -122px;
+  background-size: 162.4px 173.6px;
+}
+.txt .txt-box .txt-box-head #refund {
+  display: table-cell;
+  height: 24px;
+  width: 29px;
+  background: url("../img/class-rule/sprite.png") no-repeat;
+  background-position: -39px -122px;
+  background-size: 162.4px 173.6px;
+}
+.txt .txt-box .txt-box-head #service {
+  display: table-cell;
+  height: 24px;
+  width: 29px;
+  background: url("../img/class-rule/sprite.png") no-repeat;
+  background-position: 0px -122px;
+  background-size: 162.4px 173.6px;
+}
+.txt .txt-box .txt-box-head #cash-back {
+  display: table-cell;
+  height: 27px;
+  width: 32px;
+  background: url("../img/class-rule/sprite.png") no-repeat;
+  background-size: 162.4px 173.6px;
+  background-position: -109px -122px;
+}
+.txt .txt-box .txt-detail {
+  line-height: 22px;
+  font-size: 13px;
 }
