@@ -6,6 +6,7 @@ body {
   overflow-x: hidden;
   word-wrap:break-word;
   font-size: 14px;
+  position: relative;
 }
 img {
   width: 100%;
@@ -91,16 +92,14 @@ ul {
   margin-left: 23px;
   margin-bottom: 26px;
   position: relative;
-  z-index: 20;
-  background-image: url("../img/class-rule/bg_2.png");
-  background-repeat: no-repeat;
-  > p{
+  .middle-txt {
+    position: absolute;
+    width: 74%;
+    color: #ffffff;
+    top: 40%;
+    left: 12%;
     line-height: 22px;
-    //color: #fff;
-    //position: absolute;
-    //top: 115px;
-    //left: 40px;
-    //right: 80px;
+    z-index: 11;
   }
 }
 .txt {
@@ -152,6 +151,35 @@ ul {
     .txt-detail {
       line-height: 22px;
       font-size: 13px;
+    }
+  }
+}
+.red-bag {
+  position: absolute;
+  z-index: -1;
+  display: inline-block;
+  height: 66px;
+  width: 49px;
+  background: url("../img/class-rule/sprite.png") no-repeat;
+  background-size: 203px*0.5 217px*0.5;
+  &#top-red-bag {
+    background-position: 0px 0px;
+    bottom: 19%;
+  }
+  &#bottom-red-bag {
+    background-position: -50px 0px;
+    bottom: 1%;
+    right: 0px;
+  }
+
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    .middle {
+      .middle-txt {
+        top: 36%;
+      }
     }
   }
 }
