@@ -2,16 +2,59 @@ body {
   margin: 0 auto;
   padding: 0;
   max-width: 700px;
-  background-color: #f5f5f5;
+  background-color: #f2f2f2;
   overflow-x: hidden;
   word-wrap: break-word;
   font-size: 14px;
   position: relative;
+  color: #9b9b9b;
+  font-size: 13px;
 }
 img {
   width: 100%;
+  border: 0 none;
 }
 ul {
   margin: 0;
   padding: 0;
+}
+.content {
+  margin-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #ffffff;
+}
+.content .title {
+  color: #383D43;
+  font-size: 14px;
+  padding: 15px 0px;
+  font-weight: bold;
+}
+.content .title .icon {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  background: url("../img/class-rule/icon.png") no-repeat;
+  background-size: 111.3px 23.1px;
+}
+.content .title .icon.about-banke-img {
+  background-position: -89px 0px;
+}
+.content .title .icon.service-img {
+  background-position: -89px 0px;
+}
+.content .title .text-title {
+  margin-left: 30px;
+  display: inline-block;
+  vertical-align: -4px;
+}
+.content .text {
+  padding-bottom: 15px;
+  border-top: 1px solid #e5e5e5;
+  line-height: 22px;
+}
+.content .text .second-title {
+  color: #383D43;
+  font-weight: bold;
+  padding: 15px 0;
 }
