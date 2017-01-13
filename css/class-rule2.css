@@ -56,5 +56,24 @@ ul {
 .content .text .second-title {
   color: #383D43;
   font-weight: bold;
-  padding: 15px 0;
+  padding-top: 15px;
+}
+.content .text .text-box {
+  padding-top: 15px;
+  line-height: 25px;
+}
+.content .text .text-box > div {
+  line-height: 22px;
+}
+.content .text .text-box .number {
+  margin-right: 10px;
+  text-align: center;
+  display: inline-block;
+  background-color: #FA4535;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 20px;
+  color: #ffffff;
+  font-weight: bolder;
 }

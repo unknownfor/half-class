@@ -110,6 +110,7 @@ body {
 }
 .address-box .address {
   display: inline-block;
+  width: 80%;
 }
 .address-box .address .address-img {
   position: absolute;
