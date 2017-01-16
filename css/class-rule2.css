@@ -5,7 +5,6 @@ body {
   background-color: #f2f2f2;
   overflow-x: hidden;
   word-wrap: break-word;
-  font-size: 14px;
   position: relative;
   color: #9b9b9b;
   font-size: 13px;
@@ -17,6 +16,9 @@ img {
 ul {
   margin: 0;
   padding: 0;
+}
+.banner {
+  background-color: #ffffff;
 }
 .content {
   margin-bottom: 15px;
