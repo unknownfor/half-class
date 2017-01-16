@@ -36,12 +36,40 @@ ul {
     padding: 15px;
   }
 }
+.head {
+  text-align: center;
+  .head-bg{
+    max-height: 230px;
+    position: relative;
+  }
+  .head-img{
+      position: absolute;
+      top: 180px;
+      margin: 0 auto;
+      width: 100%;
+      > img {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        border: 3px solid #ffffff;
+      }
+    }
+  .head-name {
+      color: #383D43;
+      font-size: 14px;
+      margin: 43px 0px 6px 0px;
+    }
+  .head-title {
+      color: #9B9B9B;
+      font-size: 12px;
+      padding-bottom: 15px;
+    }
+}
 .address-box {
   display: flex;
-  width: 100%;
   .address {
-    display: inline-block;
-    width: 80%;
+    flex: 1;
     .address-img {
       position: absolute;
       height: 24px;
@@ -56,8 +84,8 @@ ul {
     }
   }
   .address-call {
+    width: 70px;
     height: 100%;
-    display: inline-block;
     border-left: 1px solid #f2f2f2;
     a {
       display: block;

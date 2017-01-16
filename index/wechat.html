@@ -61,6 +61,14 @@
         </div>
     </div>
 </body>
-<script type="application/javascript" src="__JS__/require.js" data-main="__JS__/config"></script>
+<script>
+    window.hisihiUrlObj={
+        api_url_php:'http://{$Think.server.HTTP_HOST}/api.php?s=',
+        img_url:'__IMG__',
+        js: "__JS__",
+        api_url:'__API_URL__'
+    };
+</script>
+<script type="application/javascript" src="../js/sharecommon/require.js" data-main="../js/wechat/config.js"></script>
 <!--<script type="text/javascript" data-main="__JS__/famous-teacher-3.4.min"  src="__JS__/require.js" ></script>-->
 </html>

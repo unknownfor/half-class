@@ -1,9 +1,6 @@
 /**
  * Created by hisihi on 2017/1/14.
  */
-/**
- * Created by hisihi on 2016/11/22.
- */
 requirejs.config({
     baseUrl: window.hisihiUrlObj.js,
     paths: {
@@ -32,14 +29,13 @@ requirejs.config({
     }
 });
 
-require(['home','prefixfree'],function(fTeacher){
+require(['home','prefixfree'],function(Invitation){
     var url = window.location.href;
     if(url.indexOf('%2F')>0){
         url=url.replace(/\%2F/g,'\/');
     }
 
     var reg = /id\/[0-9][0-9]*/g,
-    //微信老师为uid还是id
         id = url.match(reg)[0].toString().replace(/id\//g,'');
-    window.fTeacher = new fTeacher(id,window.hisihiUrlObj.api_url_php);
+    window.Invitation = new Invitation(id,window.hisihiUrlObj.api_url_php);
 });

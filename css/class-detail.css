@@ -90,6 +90,7 @@ body {
 }
 .pay-rule .pay-rule-box .tips {
   padding-bottom: 10px;
+  line-height: 20px;
 }
 .pay-rule .pay-rule-box .tips:last-child {
   padding-bottom: 0px;
