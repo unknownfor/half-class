@@ -717,12 +717,12 @@ define(['$','fastclick'],function() {
         downloadBar:{
             show:false,
             pos:1,//1 表示在底部，0表示在顶部
-            title:'嘿设汇',
-            description:'设计师必备，百万设计师都在用',
+            title:'半课',
+            description:'一半学费上好课',
             logo:'http://pic.hisihi.com/2016-08-04/1470283879133258.png',
             starImg:'http://pic.hisihi.com/2016-08-04/1470283927495292.png',
             downloadBtnWord:'立即下载',
-            btnBgColor:'#FF5A00',
+            btnBgColor:'#FFEB3B',
             backgroundColor:'#9E9A98',
             height:'56px'
         }

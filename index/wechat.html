@@ -26,13 +26,13 @@
             <div class="register-img phone-img"></div>
             <input class="register-code" placeholder="输入手机号"/>
             <hr />
-            <button>获取验证码</button>
+            <span class="code-btn" type="button" id="btn" value="获取验证码" onclick="settime(this)" >获取验证码</span>
         </div>
         <div class="register-box code">
             <div class="register-img code-img"></div>
-            <input class="register-code" placeholder="验证码"/>
+            <input class="register-code" placeholder="验证码" type="password"/>
         </div>
-        <button class="btn">注册获得20元现金</button>
+        <div class="btn">注册获得20元现金</div>
     </div>
     <!--注册成功-->
     <div class="register-success notices hide">
@@ -61,14 +61,57 @@
         </div>
     </div>
 </body>
-<script>
-    window.hisihiUrlObj={
-        api_url_php:'http://{$Think.server.HTTP_HOST}/api.php?s=',
-        img_url:'__IMG__',
-        js: "__JS__",
-        api_url:'__API_URL__'
+<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript">
+    var countdown=60;
+    function settime(obj) {
+        if (countdown == 0) {
+            obj.removeAttribute("disabled");
+            obj.textContent="获取验证码";
+            countdown = 60;
+            return;
+        } else {
+            obj.setAttribute("disabled", true);
+            obj.textContent="" + countdown + "s";
+            countdown--;
+        }
+        setTimeout(function() {
+                    settime(obj) }
+                ,1000)
+    }
+
+   function singIn() {
+        var $input =$('.register-code input'),
+                that=this,
+                number = $input.eq(0).val().trim(),
+                name = $input.eq(1).val().trim(),
+                reg=/^1\d{10}$/;
+        if (!reg.test(number)) {
+            this.showTips('请正确输入手机号码');
+            return;
+        }
+        this.getDataAsync({
+            //地址
+            //url: this.baseUrl + XX,
+            sCallback: function(result){
+                that.controlLoadingBox(false);
+                if(result.success){
+            //$('.sing-in-modal .tips').css('opacity', '1');
+                    that.showTips('成功');
+                }else{
+                    that.showTips('失败');
+                }
+            },
+            eCallback:function(resutl){
+                that.controlLoadingBox(false);
+                var txt='失败';
+                if(resutl.code==-2){
+                    txt='不能重复请求';
+                }
+                that.showTips(txt);
+            },
+            type:'get'
+        });
     };
 </script>
-<!--<script type="application/javascript" src="__JS__/require.js" data-main="__JS__/config"></script>-->
-<!--<script type="text/javascript" data-main="__JS__/famous-teacher-3.4.min"  src="__JS__/require.js" ></script>-->
 </html>

@@ -35,10 +35,7 @@ button {
 .register .register-box .register-img {
   height: 23px;
   margin: 8px 10px;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 1 16px;
-  -ms-flex: 0 1 16px;
-  flex: 0 1 16px;
+  width: 16px;
   background: url('../img/wehchat/sprite.png') no-repeat;
 }
 .register .register-box .register-code {
@@ -46,25 +43,31 @@ button {
   height: 40px;
   padding: 0px;
   border: none;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-box-flex: 3;
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
 }
 .register .register-box .register-code:focus {
   outline: none;
 }
-.register .register-box > button {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 2 100px;
-  -ms-flex: 0 2 100px;
-  flex: 0 2 100px;
-  border-radius: 4px;
+.register .register-box .code-btn {
+  padding: 10px;
   background-color: #ffffff;
-  border: none;
-  text-align: center;
-  line-height: 40px;
+  border-radius: 4px;
   color: #9B9B9B;
+  line-height: 40px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 2 60px;
+  -ms-flex: 0 2 60px;
+  flex: 0 2 60px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+}
+.register .register-box .code-btn.disabled {
+  pointer-events: none;
 }
 .register .register-box > hr {
   color: #FFE747;
@@ -99,6 +102,7 @@ button {
   width: 100%;
   text-align: center;
   position: relative;
+  margin-bottom: 40px;
 }
 .active .active-head {
   color: #383D43;
@@ -176,4 +180,9 @@ button {
 }
 .notices.hide {
   display: none;
+}
+@media screen and (max-width: 320px) {
+  .active .active-txt {
+    font-size: 10px;
+  }
 }
