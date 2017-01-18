@@ -719,11 +719,11 @@ define(['$','fastclick'],function() {
             pos:1,//1 表示在底部，0表示在顶部
             title:'半课',
             description:'一半学费上好课',
-            logo:'http://pic.hisihi.com/2016-08-04/1470283879133258.png',
-            starImg:'http://pic.hisihi.com/2016-08-04/1470283927495292.png',
+            logo:'http://pic.hisihi.com/2017-01-18/1484705233742343.png',
+            starImg:'http://pic.hisihi.com/2017-01-18/1484705240013582.png',
             downloadBtnWord:'立即下载',
-            btnBgColor:'#FFEB3B',
-            backgroundColor:'#9E9A98',
+            btnBgColor:'#FCEC3C',
+            backgroundColor:'#FFEB3B',
             height:'56px'
         }
     };

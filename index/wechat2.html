@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="Resource-type" content="Document">
+    <!--禁止缩放-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!--禁止数字识别为手机号-->
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <link type="text/css" href="../css/wechat2.css" rel="stylesheet">
+    <title>微信注册</title>
+</head>
+<body>
+<!--顶部图片-->
+<div class="head">
+    <img src="../img/wehchat/bg_top.png" />
+</div>
+<!--手机注册-->
+<div class="register">
+    <div class="register-box phone">
+        <div class="register-img phone-img"></div>
+        <input class="register-code" placeholder="输入手机号"/>
+        <hr />
+        <span class="code-btn" type="button" id="btn" value="获取验证码" onclick="settime(this)" >获取验证码</span>
+    </div>
+    <div class="register-box code">
+        <div class="register-img code-img"></div>
+        <input class="register-code" placeholder="验证码" type="password"/>
+    </div>
+    <div class="btn">注册获得20元现金</div>
+</div>
+<!--活动细则-->
+<div class="active">
+    <div class="active-head"><span>活动细则</span></div>
+    <img src="../img/wehchat/bg_down.png" />
+    <div class="active-txt">
+        <div class="txt">1.新用户通过此页面注册会获得20元现金；</div>
+        <div class="txt">2.需下载半课app，登陆并认证；</div>
+        <div class="txt">3.提现流程参见半课app；</div>
+        <div class="txt">4.参加学习计划最高可获得学费50%奖励；</div>
+        <div class="txt">5.半课保留法律范围内允许的对活动的解释权。</div>
+    </div>
+</div>
+</body>
+<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript">
+    var countdown=60;
+    function settime(obj) {
+        if (countdown == 0) {
+            obj.removeAttribute("disabled");
+            obj.textContent="获取验证码";
+            countdown = 60;
+            return;
+        } else {
+            obj.setAttribute("disabled", true);
+            obj.textContent="" + countdown + "s";
+            countdown--;
+        }
+        setTimeout(function() {
+                    settime(obj) }
+                ,1000)
+    }
+
+    function singIn() {
+        var $input =$('.register-code input'),
+                that=this,
+                number = $input.eq(0).val().trim(),
+                name = $input.eq(1).val().trim(),
+                reg=/^1\d{10}$/;
+        if (!reg.test(number)) {
+            this.showTips('请正确输入手机号码');
+            return;
+        }
+        this.getDataAsync({
+            //地址
+            //url: this.baseUrl + XX,
+            sCallback: function(result){
+                that.controlLoadingBox(false);
+                if(result.success){
+                    //$('.sing-in-modal .tips').css('opacity', '1');
+                    that.showTips('成功');
+                }else{
+                    that.showTips('失败');
+                }
+            },
+            eCallback:function(resutl){
+                that.controlLoadingBox(false);
+                var txt='失败';
+                if(resutl.code==-2){
+                    txt='不能重复请求';
+                }
+                that.showTips(txt);
+            },
+            type:'get'
+        });
+    };
+</script>
+</html>
