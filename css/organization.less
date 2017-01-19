@@ -44,7 +44,6 @@ ul {
   }
   .head-img{
       position: absolute;
-      top: 180px;
       margin: 0 auto;
       width: 100%;
       > img {
@@ -52,7 +51,7 @@ ul {
         width: 60px;
         height: 60px;
         border-radius: 60px;
-        border: 3px solid #ffffff;
+        //border: 3px solid #ffffff;
       }
     }
   .head-name {
@@ -81,12 +80,14 @@ ul {
     .address-detail {
       display: inline-block;
       margin-left: 25px;
+      border-right: 1px solid #f2f2f2;
+      line-height: 20px;
+      color: #808080;
     }
   }
   .address-call {
     width: 70px;
     height: 100%;
-    border-left: 1px solid #f2f2f2;
     a {
       display: block;
     }
@@ -97,7 +98,7 @@ ul {
       justify-content: center;
       align-items: center;
       #img {
-        width: 32px;
+        width: 33px;
         height: 33px;
         background: url("../img/sprite.png") no-repeat;
         background-size: 158px*0.5 66px*0.5;
@@ -108,7 +109,71 @@ ul {
   }
 }
 .class-info {
+  color: #383D43;
+  line-height: 22px;
   > img {
     max-width: 100%;
+  }
+}
+
+
+#downloadCon{
+  //margin: 0 auto;
+  //max-width: 700px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  opacity: 1;
+  max-height: 113px;
+  display: inline-block;
+  background-color: #FFEB3B;
+  .downloadBar-img {
+    max-width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    opacity: 0;
+    display: inline-block;
+  }
+  a {
+    display:block;
+    text-decoration: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 420px){
+  .head {
+    .head-img {
+      top: 193px;
+    }
+  }
+  #downloadCon {
+    height: 78px;
+  }
+}
+@media screen and (max-width: 380px){
+  .head {
+    .head-img {
+      top: 180px;
+    }
+  }
+  #downloadCon {
+    height: 71px;
+  }
+}
+@media screen and (max-width: 320px){
+  .head {
+    .head-img {
+      top: 148px;
+    }
+  }
+  #downloadCon {
+    height: 61px;
   }
 }

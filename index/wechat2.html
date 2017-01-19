@@ -12,7 +12,7 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="Cache" content="no-cache">
-    <link type="text/css" href="../css/wechat2.css" rel="stylesheet">
+    <link type="text/css" href="../css/wechat/wechat2.css" rel="stylesheet">
     <title>微信注册</title>
 </head>
 <body>
@@ -24,19 +24,46 @@
 <div class="register">
     <div class="register-box phone">
         <div class="register-img phone-img"></div>
-        <input class="register-code" placeholder="输入手机号"/>
+        <input class="register-code" id="phone-num" placeholder="输入手机号"/>
         <hr />
-        <span class="code-btn" type="button" id="btn" value="获取验证码" onclick="settime(this)" >获取验证码</span>
+        <input class="code-btn" type="button" id="phone-code-btn" value="获取验证码" onclick="setTime(this)"/>
     </div>
     <div class="register-box code">
         <div class="register-img code-img"></div>
-        <input class="register-code" placeholder="验证码" type="password"/>
+        <input class="register-code" id="user-code" placeholder="验证码" />
     </div>
     <div class="btn">注册获得20元现金</div>
 </div>
+<!--领取优惠券-->
+<div class="coupon hide">
+    <div class="coupon-box">
+        <img class="ticket" id="one" src="../img/wehchat/20.png" />
+        <img class="ticket" id="two" src="../img/wehchat/50.png">
+        <div class="coupon-count">奖励已放至账户<span>18140662282</span></div>
+        <a href="http://www.hisihi.com/download.php" ><div class="btn-active">下载半课领取</div></a>
+    </div>
+</div>
+<!--朋友获得奖励-->
+<div class="reward hide">
+    <div class="second-title reward-title"><span>哪些朋友获得了奖励</span></div>
+        <div class="reward-box">
+            <img class="reward-img"  src="../img/banana.jpg"/>
+            <span class="reward-name">小野妹子</span>
+            <div class="reward-time-box">
+                <span class="reward-time">2017-01-18</span>
+            </div>
+        </div>
+    <div class="reward-box">
+        <img class="reward-img"  src="../img/banana.jpg"/>
+        <span class="reward-name">小野妹子</span>
+        <div class="reward-time-box">
+            <span class="reward-time">2017-01-18</span>
+        </div>
+    </div>
+</div>
 <!--活动细则-->
 <div class="active">
-    <div class="active-head"><span>活动细则</span></div>
+    <div class="second-title active-head"><span>活动细则</span></div>
     <img src="../img/wehchat/bg_down.png" />
     <div class="active-txt">
         <div class="txt">1.新用户通过此页面注册会获得20元现金；</div>
@@ -47,57 +74,25 @@
     </div>
 </div>
 </body>
-<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+<script src="../js/sharecommon/zepto.min.js" type="text/javascript"></script>
+<!--<script src="../js/sharecommon/base-1.1.js" type="text/javascript"></script>-->
+<script src="../js/wechat/wechat.js"></script>
 <script type="text/javascript">
     var countdown=60;
-    function settime(obj) {
+    function setTime(obj) {
         if (countdown == 0) {
             obj.removeAttribute("disabled");
-            obj.textContent="获取验证码";
+            obj.value="获取验证码";
             countdown = 60;
             return;
         } else {
             obj.setAttribute("disabled", true);
-            obj.textContent="" + countdown + "s";
+            obj.value=" "+ countdown +" s";
             countdown--;
         }
         setTimeout(function() {
-                    settime(obj) }
+                    setTime(obj) }
                 ,1000)
     }
-
-    function singIn() {
-        var $input =$('.register-code input'),
-                that=this,
-                number = $input.eq(0).val().trim(),
-                name = $input.eq(1).val().trim(),
-                reg=/^1\d{10}$/;
-        if (!reg.test(number)) {
-            this.showTips('请正确输入手机号码');
-            return;
-        }
-        this.getDataAsync({
-            //地址
-            //url: this.baseUrl + XX,
-            sCallback: function(result){
-                that.controlLoadingBox(false);
-                if(result.success){
-                    //$('.sing-in-modal .tips').css('opacity', '1');
-                    that.showTips('成功');
-                }else{
-                    that.showTips('失败');
-                }
-            },
-            eCallback:function(resutl){
-                that.controlLoadingBox(false);
-                var txt='失败';
-                if(resutl.code==-2){
-                    txt='不能重复请求';
-                }
-                that.showTips(txt);
-            },
-            type:'get'
-        });
-    };
 </script>
 </html>

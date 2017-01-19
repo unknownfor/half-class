@@ -79,3 +79,49 @@ ul {
     }
   }
 }
+
+#downloadCon{
+  //margin: 0 auto;
+  //max-width: 700px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  opacity: 1;
+  max-height: 113px;
+  display: inline-block;
+  background-color: #FFEB3B;
+  .downloadBar-img {
+    max-width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    opacity: 0;
+    display: inline-block;
+  }
+  a {
+    display:block;
+    text-decoration: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 420px){
+  #downloadCon {
+    height: 78px;
+  }
+}
+@media screen and (max-width: 380px){
+  #downloadCon {
+    height: 71px;
+  }
+}
+@media screen and (max-width: 320px){
+  #downloadCon {
+    height: 61px;
+  }
+}

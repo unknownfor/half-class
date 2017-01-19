@@ -3,5 +3,8 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/css/organization.less" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/css/wechat.less" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/css/wechat/wechat2.less" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/common.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/wechat/wechat.js" charset="UTF-8" />
   </component>
 </project>
