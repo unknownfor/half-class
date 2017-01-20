@@ -34,8 +34,17 @@ button {
     background-color: #4990E2;
   }
 }
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.none {
+  opacity: 0.1;
+  background-color: #f2f2f2;
+}
 .register {
-  //注册成功隐藏页面
   text-align: center;
   margin: 0px 30px;
   .register-box {
@@ -97,12 +106,12 @@ button {
     }
   }
 }
-.active {
+.activity {
   width: 100%;
   text-align: center;
   position: relative;
   margin-bottom: 40px;
-  .active-head {
+  .activity-head {
     color: #383D43;
     text-align: center;
     margin-bottom: 20px;
@@ -114,7 +123,7 @@ button {
     max-width: 90%;
     display: inline-block;
   }
-  .active-txt {
+  .activity-txt {
     text-align: left;
     position: absolute;
     top: 32%;
@@ -193,7 +202,6 @@ button {
       display: inline-block;
     }
   }
-
 }
 .reward-title:before {
   width: 22% !important;
@@ -218,126 +226,10 @@ button {
   vertical-align: 3px;
 }
 
-//加载动画
-#loading-data {
-  position: fixed;
-  width: 100px;
-  height: 100px;
-  margin-left: -50px;
-  margin-top: -50px;
-  top: 50%;
-  left: 50%;
-  z-index: 55555;
-  text-align: center;
-  display: block;
-  &.active {
-    .loding-img {
-      -webkit-animation: turning 1s linear infinite;
-      -moz-animation: turning 1s linear infinite;
-    }
-  }
-  .loding-img {
-    width: 40px;
-    height: 40px;
-    display: inline-block;
-  }
-}
-
-
-//提示框
-.result-tips {
-  @w:160px;
-  @h:34px;
-  position: fixed;
-  top: 40%;
-  left: 50%;
-  z-index: 1001;
-  height: @w;
-  width: auto;
-  //.size(@w,auto);
-  min-height: @h;
-  background: rgba(51, 51, 51, 0.85);
-  margin-left: -@w / 2;
-  margin-top: -35px;
-  border-radius: 3px;
-  background-clip: padding-box;
-  color: #fff;
-  text-align: center;
-  display: none;
-  p {
-    color: white;
-    font-size: 12px;
-    text-align: center;
-    margin: 10px 0;
-  }
-}
-//下载条
-#downloadCon{
-  position: fixed;
-  bottom: 0;
-  z-index: 9999;
-  opacity: 1;
-  max-height: 113px;
-  display: inline-block;
-  img{
-    max-width: 100%;
-  }
-  a {
-    position: absolute;
-    display:block;
-    text-decoration: none;
-    text-align: center;
-    z-index: 10001;
-  }
-}
-
-#downloadCon{
-  margin: 0 auto;
-  max-width: 700px;
-  //width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999;
-  opacity: 1;
-  max-height: 113px;
-  display: inline-block;
-  background-color: #FFEB3B;
-  .downloadBar-img {
-    max-width: 100%;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999;
-    opacity: 0;
-    display: inline-block;
-  }
-  a {
-    display:block;
-    text-decoration: none;
-    border: 0;
-    padding: 0;
-    margin: 0;
-  }
-}
-@media screen and (max-width: 420px){
-  #downloadCon {
-    height: 78px;
-  }
-}
-@media screen and (max-width: 380px){
-  #downloadCon {
-    height: 71px;
-  }
-}
 @media screen and (max-width: 320px){
   .active {
     .active-txt {
       font-size: 10px;
     }
-  }
-  #downloadCon {
-    height: 61px;
   }
 }
