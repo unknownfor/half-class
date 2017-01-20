@@ -59,6 +59,7 @@ ul {
   width: 60px;
   height: 60px;
   border-radius: 60px;
+  border: 3px solid #ffffff;
 }
 .head .head-name {
   color: #383D43;
@@ -138,14 +139,14 @@ ul {
   max-width: 100%;
 }
 #downloadCon {
-  width: 100%;
+  margin: 0 auto;
+  max-width: 700px;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 9999;
   opacity: 1;
-  max-height: 113px;
   display: inline-block;
   background-color: #FFEB3B;
 }

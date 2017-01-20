@@ -582,11 +582,12 @@ img {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
 }
 .address-box .address {
-  display: inline-block;
-  width: 80%;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 .address-box .address .address-img {
   position: absolute;
@@ -605,8 +606,8 @@ img {
   color: #808080;
 }
 .address-box .address-call {
+  width: 70px;
   height: 100%;
-  display: inline-block;
 }
 .address-box .address-call a {
   display: block;
@@ -644,14 +645,14 @@ img {
   max-width: 100%;
 }
 #downloadCon {
-  width: 100%;
+  margin: 0 auto;
+  max-width: 700px;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 9999;
   opacity: 1;
-  max-height: 113px;
   display: inline-block;
   background-color: #FFEB3B;
 }

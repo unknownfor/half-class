@@ -115,10 +115,8 @@ img {
 }
 .address-box {
   display: flex;
-  width: 100%;
   .address {
-    display: inline-block;
-    width: 80%;
+    flex: 1;
     .address-img {
       position: absolute;
       height: 24px;
@@ -136,8 +134,8 @@ img {
     }
   }
   .address-call {
+    width: 70px;
     height: 100%;
-    display: inline-block;
     a {
       display: block;
     }
@@ -168,16 +166,15 @@ img {
 
 
 #downloadCon{
-  //margin: 0 auto;
-  //max-width: 700px;
-  width: 100%;
+  margin: 0 auto;
+  max-width: 700px;
+  //width: 100%;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 9999;
   opacity: 1;
-  max-height: 113px;
   display: inline-block;
   background-color: #FFEB3B;
   .downloadBar-img {
