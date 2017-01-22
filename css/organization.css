@@ -21,7 +21,6 @@ ul {
 .container {
   font-size: 14px;
   background-color: #fff;
-  margin-bottom: 15px;
 }
 .container .container-head {
   color: #212121;
@@ -71,19 +70,23 @@ ul {
   font-size: 12px;
   padding-bottom: 15px;
 }
-.address-box {
+.address {
+  margin: 15px 0px;
+}
+.address .address-box {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
-.address-box .address {
+.address .address-box .address-info {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  border-right: 1px solid #f2f2f2;
 }
-.address-box .address .address-img {
+.address .address-box .address-info .address-img {
   position: absolute;
   height: 24px;
   width: 20px;
@@ -92,21 +95,20 @@ ul {
   -webkit-background-size: 79px 33px;
   background-size: 79px 33px;
 }
-.address-box .address .address-detail {
+.address .address-box .address-info .address-detail {
   display: inline-block;
   margin-left: 25px;
-  border-right: 1px solid #f2f2f2;
   line-height: 20px;
   color: #808080;
 }
-.address-box .address-call {
+.address .address-box .address-call {
   width: 70px;
   height: 100%;
 }
-.address-box .address-call a {
+.address .address-box .address-call a {
   display: block;
 }
-.address-box .address-call #address-call-box {
+.address .address-box .address-call #address-call-box {
   width: 80px;
   height: 50px;
   display: -webkit-box;
@@ -122,7 +124,7 @@ ul {
   -ms-flex-align: center;
   align-items: center;
 }
-.address-box .address-call #address-call-box #img {
+.address .address-box .address-call #address-call-box #img {
   width: 33px;
   height: 33px;
   background: url("../img/sprite.png") no-repeat;

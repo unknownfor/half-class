@@ -21,7 +21,6 @@ ul {
 .container {
   font-size: 14px;
   background-color: #fff;
-  margin-bottom:15px;
   .container-head {
     color: #212121;
     height: 35px;
@@ -65,48 +64,52 @@ ul {
       padding-bottom: 15px;
     }
 }
-.address-box {
-  display: flex;
-  .address {
-    flex: 1;
-    .address-img {
-      position: absolute;
-      height: 24px;
-      width: 20px;
-      background: url("../img/sprite.png") no-repeat;
-      background-position: -61px 0px;
-      background-size: 158px*0.5 66px*0.5;
-    }
-    .address-detail {
-      display: inline-block;
-      margin-left: 25px;
+.address {
+  margin: 15px 0px;
+  .address-box {
+    display: flex;
+    .address-info {
+      flex: 1;
       border-right: 1px solid #f2f2f2;
-      line-height: 20px;
-      color: #808080;
-    }
-  }
-  .address-call {
-    width: 70px;
-    height: 100%;
-    a {
-      display: block;
-    }
-    #address-call-box {
-      width: 80px;
-      height: 50px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      #img {
-        width: 33px;
-        height: 33px;
+      .address-img {
+        position: absolute;
+        height: 24px;
+        width: 20px;
         background: url("../img/sprite.png") no-repeat;
+        background-position: -61px 0px;
         background-size: 158px*0.5 66px*0.5;
-        background-position: 1px 0px;
+      }
+      .address-detail {
+        display: inline-block;
+        margin-left: 25px;
+        line-height: 20px;
+        color: #808080;
+      }
+    }
+    .address-call {
+      width: 70px;
+      height: 100%;
+      a {
+        display: block;
+      }
+      #address-call-box {
+        width: 80px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        #img {
+          width: 33px;
+          height: 33px;
+          background: url("../img/sprite.png") no-repeat;
+          background-size: 158px*0.5 66px*0.5;
+          background-position: 1px 0px;
+        }
       }
     }
   }
 }
+
 .class-info {
   color: #383D43;
   line-height: 22px;

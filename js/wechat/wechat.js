@@ -60,19 +60,16 @@ $(function () {
                 return;
             } else {
                 this.setAttribute("disabled", true);
-                //this.attr("disabled,true");
                 this.value = " " + countdown + " s";
                 countdown--;
             }
         var that=this;
         setTimeout(function () {
                     setTime.call(that);
-                    //setTime(that)
                 }, 1000)
         });
 
-    //验证码验证
-    //合法性
+    //验证码验证,合法性
 
     //注册
     $(document).on('click','.btn.active', function () {
