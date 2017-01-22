@@ -5,9 +5,6 @@ $(function () {
 
     downloadBar();
     setFootStyle();
-    //showSuccessPage();
-    //addTip();
-    //showTips('注册代码');
 
     var that = this,
         href= window.location.href,
@@ -54,33 +51,44 @@ $(function () {
     });
 
     //倒计时
-    var countdown=60;
-    function setTime(obj) {
-        if (countdown == 0) {
-            obj.removeAttribute("disabled");
-            obj.value="获取验证码";
-            countdown = 60;
-            return;
-        } else {
-            obj.setAttribute("disabled", true);
-            obj.value=" "+ countdown +" s";
-            countdown--;
-        }
-        setTimeout(function() {
-                setTime(obj) }
-            ,1000)
-    }
+    var countdown = 25;
+    $(document).on('click','#phone-code-btn', function setTime() {
+            if (countdown == 0) {
+                this.removeAttribute("disabled");
+                this.value = "获取验证码";
+                countdown = 25;
+                return;
+            } else {
+                this.setAttribute("disabled", true);
+                //this.attr("disabled,true");
+                this.value = " " + countdown + " s";
+                countdown--;
+            }
+        var that=this;
+        setTimeout(function () {
+                    setTime.call(that);
+                    //setTime(that)
+                }, 1000)
+        });
+
+    //验证码验证
+    //合法性
 
     //注册
     $(document).on('click','.btn.active', function () {
-            //$('body').addClass('none');
-            $('body').hide();
+            $('#wrapper').hide();
             addLoadingImg();
             controlLoadingBox(true);
+            var phone = $('#phone-num').val,
+                code = $('#user-code').val;
             $.ajax({
                 type:"POST", //提交数据的类型 POST GET
-                url:"XX",  //提交的地址
-                data:{Name:"",Password:""},  //提交的数据
+                url:"http://XX",  //用户注册
+                data:{
+                    //手机号 短信验证码
+                    username:phone,
+                    smsId:code
+                },
                 success:function(){
                     //成功返回之后调用的函数
                     controlLoadingBox(false),
@@ -89,6 +97,7 @@ $(function () {
                 //调用出错执行的函数
                 error: function(){
                     //请求出错处理
+                    controlLoadingBox(false),
                     addTip(),
                     showTips('注册不成功');
                 }

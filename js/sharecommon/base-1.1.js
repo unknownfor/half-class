@@ -1,8 +1,6 @@
 /**
  * modified by jimmy on 2016/07/04.
  */
-
-
 define(['$','fastclick'],function() {
     FastClick.attach(document.body);
     /**基础类**/

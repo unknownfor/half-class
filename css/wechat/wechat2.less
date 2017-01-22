@@ -1,5 +1,5 @@
 body {
-  background-color: #FFE747;
+  background-color: #f2f2f2;
   margin:0 auto;
   padding:0;
   max-width: 700px;
@@ -44,187 +44,197 @@ button {
   opacity: 0.1;
   background-color: #f2f2f2;
 }
-.register {
-  text-align: center;
-  margin: 0px 30px;
-  .register-box {
-    border-radius: 4px;
-    display: flex;
-    flex-direction: row;
-    background-color: #ffffff;
-    .register-img {
-      height: 23px;
-      margin: 8px 10px;
-      //flex: 0 1 16px;
-      width: 16px;
-      background: url('../../img/wehchat/sprite.png') no-repeat;
-    }
-    .register-code {
+#wrapper {
+  background-color: #FFE747;
+  .register {
+    text-align: center;
+    margin: 0px 30px;
+    .register-box {
       border-radius: 4px;
-      height: 40px;
-      padding:0px;
-      border: none;
-      flex: 3;
-    }
-    .register-code:focus {
-      outline: none;
-    }
-    .code-btn {
-      padding: 10px;
-      background-color: rgba(255, 255, 255, 0);
-      border-radius: 4px;
-      color: #9B9B9B;
-      line-height: 40px;
-      flex: 0 2 90px;
-      padding: 0;
-      margin: 0;
-      border: 0;
-      outline: 0;
-      //验证码发送倒计时，禁止点击发送按钮
-      &.disabled {
-        pointer-events: none;
+      display: flex;
+      flex-direction: row;
+      background-color: #ffffff;
+      .register-img {
+        height: 23px;
+        margin: 8px 10px;
+        //flex: 0 1 16px;
+        width: 16px;
+        background: url('../../img/wehchat/sprite.png') no-repeat;
       }
-    }
+      .register-code {
+        border-radius: 4px;
+        height: 40px;
+        padding:0px;
+        border: none;
+        flex: 3;
+      }
+      .register-code:focus {
+        outline: none;
+      }
+      .code-btn {
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0);
+        border-radius: 4px;
+        color: #9B9B9B;
+        line-height: 40px;
+        flex: 0 2 90px;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        outline: 0;
+        //验证码发送倒计时，禁止点击发送按钮
+        &.disabled {
+          pointer-events: none;
+        }
+      }
 
-    > hr {
-      color: #FFE747;
-    }
-    &.phone {
-      margin-top: 30px;
-      margin-bottom: 15px;
-      .phone-img {
-        background-size: 64px*0.6 36px*0.6;
-        background-position: 0px 0px;
+      > hr {
+        color: #FFE747;
+      }
+      &.phone {
+        margin-top: 30px;
+        margin-bottom: 15px;
+        .phone-img {
+          background-size: 64px*0.6 36px*0.6;
+          background-position: 0px 0px;
+        }
+      }
+      &.code {
+        margin-bottom: 30px;
+        .code-img {
+          background-size: 64px*0.6 36px*0.6;
+          background-position: -24px 0px;
+        }
       }
     }
-    &.code {
-      margin-bottom: 30px;
-      .code-img {
-        background-size: 64px*0.6 36px*0.6;
-        background-position: -24px 0px;
-      }
-    }
   }
-}
-.activity {
-  width: 100%;
-  text-align: center;
-  position: relative;
-  margin-bottom: 40px;
-  .activity-head {
-    color: #383D43;
-    text-align: center;
-    margin-bottom: 20px;
-    > span {
-      padding: 0px 10px;
-    }
-  }
-  > img {
-    max-width: 90%;
-    display: inline-block;
-  }
-  .activity-txt {
-    text-align: left;
-    position: absolute;
-    top: 32%;
-    left: 15%;
-    width: 70%;
-    font-size: 13px;
-    color: #383D43;
-    line-height: 22px;
-    > div {
-      padding-bottom: 5px;
-    }
-  }
-}
-.coupon {
-  margin: 20px 15px 30px 15px;
-  background-color: rgba(251,192,0,0.3);
-  padding: 15px;
-  border-radius: 4px;
-  text-align: center;
-  .coupon-count {
-    color: #9b9b9b;
-    margin: 15px 0px;
-    > span {
-      padding-left: 5px;
-      color: #4A90E2;
-    }
-  }
-  .ticket {
-    &#one {
-      margin-bottom: 15px;
-    }
-  }
-  .btn-active {
-    text-align: center;
+  .activity {
     width: 100%;
-    height: 40px;
-    line-height: 40px;
-    color: #ffffff;
-    background-color: #4990E2;
+    text-align: center;
+    position: relative;
+    margin-bottom: 40px;
+    .activity-head {
+      color: #383D43;
+      text-align: center;
+      margin-bottom: 20px;
+      > span {
+        padding: 0px 10px;
+      }
+    }
+    > img {
+      max-width: 90%;
+      display: inline-block;
+    }
+    .activity-txt {
+      text-align: left;
+      position: absolute;
+      top: 32%;
+      left: 15%;
+      width: 70%;
+      font-size: 13px;
+      color: #383D43;
+      line-height: 22px;
+      > div {
+        padding-bottom: 5px;
+      }
+    }
+  }
+  .coupon {
+    margin: 20px 15px 30px 15px;
+    background-color: rgba(251,192,0,0.3);
+    padding: 15px;
     border-radius: 4px;
-    margin: 0px;
-  }
-}
-.reward {
-  margin-top: 30px;
-  text-align: center;
-  font-size: 14px;
-  .reward-title {
-    color: #383D43;
-    > span {
-      padding: 0px 10px;
-    }
-  }
-  .reward-box {
-    margin: 22px 30px;
-    text-align: left;
-    .reward-img {
-      width: 40px;
-      height: 40px;
-      border-radius: 4px;
-    }
-    .reward-name {
-      display: inline-block;
-      vertical-align: 12px;
-      margin-left: 10px;
-      
-    }
-    .reward-time-box {
-      display: inline-block;
-      width: 73px;
-      float: right;
-      line-height: 40px;
-    }
-    .reward-time {
+    text-align: center;
+    .coupon-count {
       color: #9b9b9b;
-      display: inline-block;
+      margin: 15px 0px;
+      > span {
+        padding-left: 5px;
+        color: #4A90E2;
+      }
+    }
+    .ticket {
+      &#one {
+        margin-bottom: 15px;
+      }
+    }
+    .btn-active {
+      text-align: center;
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      color: #ffffff;
+      background-color: #4990E2;
+      border-radius: 4px;
+      margin: 0px;
     }
   }
+  .reward {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 14px;
+    .reward-title {
+      color: #383D43;
+      > span {
+        padding: 0px 10px;
+      }
+    }
+    .reward-box {
+      margin: 22px 30px;
+      text-align: left;
+      .reward-img {
+        width: 40px;
+        height: 40px;
+        border-radius: 4px;
+      }
+      .reward-name {
+        display: inline-block;
+        vertical-align: 12px;
+        margin-left: 10px;
+
+      }
+      .reward-time-box {
+        display: inline-block;
+        width: 73px;
+        float: right;
+        line-height: 40px;
+      }
+      .reward-time {
+        color: #9b9b9b;
+        display: inline-block;
+      }
+    }
+  }
+  .reward-title:before {
+    width: 22% !important;
+  }
+  .reward-title:after {
+    width: 22% !important;
+  }
+  .second-title:before {
+    content: '';
+    margin-left: 15px;
+    width: 32%;
+    display: inline-block;
+    border-bottom: 4px dotted #ffffff;
+    vertical-align: 3px;
+  }
+  .second-title:after {
+    content: '';
+    margin-right: 15px;
+    width: 32%;
+    display: inline-block;
+    border-bottom: 4px dotted #ffffff;
+    vertical-align: 3px;
+  }
+  .mask {
+
+  }
 }
-.reward-title:before {
-  width: 22% !important;
-}
-.reward-title:after {
-  width: 22% !important;
-}
-.second-title:before {
-  content: '';
-  margin-left: 15px;
-  width: 32%;
-  display: inline-block;
-  border-bottom: 4px dotted #ffffff;
-  vertical-align: 3px;
-}
-.second-title:after {
-  content: '';
-  margin-right: 15px;
-  width: 32%;
-  display: inline-block;
-  border-bottom: 4px dotted #ffffff;
-  vertical-align: 3px;
-}
+
+
+
+
 
 @media screen and (max-width: 320px){
   .active {

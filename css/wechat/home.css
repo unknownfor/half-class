@@ -47,6 +47,17 @@
   height: 40px;
   display: inline-block;
 }
+@keyframes turning {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes turning {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
 #downloadCon {
   margin: 0 auto;
   max-width: 700px;
@@ -92,7 +103,7 @@
   }
 }
 body {
-  background-color: #FFE747;
+  background-color: #f2f2f2;
   margin: 0 auto;
   padding: 0;
   max-width: 700px;
@@ -137,11 +148,14 @@ button {
   opacity: 0.1;
   background-color: #f2f2f2;
 }
-.register {
+#wrapper {
+  background-color: #FFE747;
+}
+#wrapper .register {
   text-align: center;
   margin: 0px 30px;
 }
-.register .register-box {
+#wrapper .register .register-box {
   border-radius: 4px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -154,13 +168,13 @@ button {
   flex-direction: row;
   background-color: #ffffff;
 }
-.register .register-box .register-img {
+#wrapper .register .register-box .register-img {
   height: 23px;
   margin: 8px 10px;
   width: 16px;
   background: url('../../img/wehchat/sprite.png') no-repeat;
 }
-.register .register-box .register-code {
+#wrapper .register .register-box .register-code {
   border-radius: 4px;
   height: 40px;
   padding: 0px;
@@ -170,10 +184,10 @@ button {
   -ms-flex: 3;
   flex: 3;
 }
-.register .register-box .register-code:focus {
+#wrapper .register .register-box .register-code:focus {
   outline: none;
 }
-.register .register-box .code-btn {
+#wrapper .register .register-box .code-btn {
   padding: 10px;
   background-color: rgba(255, 255, 255, 0);
   border-radius: 4px;
@@ -188,48 +202,48 @@ button {
   border: 0;
   outline: 0;
 }
-.register .register-box .code-btn.disabled {
+#wrapper .register .register-box .code-btn.disabled {
   pointer-events: none;
 }
-.register .register-box > hr {
+#wrapper .register .register-box > hr {
   color: #FFE747;
 }
-.register .register-box.phone {
+#wrapper .register .register-box.phone {
   margin-top: 30px;
   margin-bottom: 15px;
 }
-.register .register-box.phone .phone-img {
+#wrapper .register .register-box.phone .phone-img {
   -webkit-background-size: 38.4px 21.6px;
   background-size: 38.4px 21.6px;
   background-position: 0px 0px;
 }
-.register .register-box.code {
+#wrapper .register .register-box.code {
   margin-bottom: 30px;
 }
-.register .register-box.code .code-img {
+#wrapper .register .register-box.code .code-img {
   -webkit-background-size: 38.4px 21.6px;
   background-size: 38.4px 21.6px;
   background-position: -24px 0px;
 }
-.activity {
+#wrapper .activity {
   width: 100%;
   text-align: center;
   position: relative;
   margin-bottom: 40px;
 }
-.activity .activity-head {
+#wrapper .activity .activity-head {
   color: #383D43;
   text-align: center;
   margin-bottom: 20px;
 }
-.activity .activity-head > span {
+#wrapper .activity .activity-head > span {
   padding: 0px 10px;
 }
-.activity > img {
+#wrapper .activity > img {
   max-width: 90%;
   display: inline-block;
 }
-.activity .activity-txt {
+#wrapper .activity .activity-txt {
   text-align: left;
   position: absolute;
   top: 32%;
@@ -239,28 +253,28 @@ button {
   color: #383D43;
   line-height: 22px;
 }
-.activity .activity-txt > div {
+#wrapper .activity .activity-txt > div {
   padding-bottom: 5px;
 }
-.coupon {
+#wrapper .coupon {
   margin: 20px 15px 30px 15px;
   background-color: rgba(251, 192, 0, 0.3);
   padding: 15px;
   border-radius: 4px;
   text-align: center;
 }
-.coupon .coupon-count {
+#wrapper .coupon .coupon-count {
   color: #9b9b9b;
   margin: 15px 0px;
 }
-.coupon .coupon-count > span {
+#wrapper .coupon .coupon-count > span {
   padding-left: 5px;
   color: #4A90E2;
 }
-.coupon .ticket#one {
+#wrapper .coupon .ticket#one {
   margin-bottom: 15px;
 }
-.coupon .btn-active {
+#wrapper .coupon .btn-active {
   text-align: center;
   width: 100%;
   height: 40px;
@@ -270,48 +284,48 @@ button {
   border-radius: 4px;
   margin: 0px;
 }
-.reward {
+#wrapper .reward {
   margin-top: 30px;
   text-align: center;
   font-size: 14px;
 }
-.reward .reward-title {
+#wrapper .reward .reward-title {
   color: #383D43;
 }
-.reward .reward-title > span {
+#wrapper .reward .reward-title > span {
   padding: 0px 10px;
 }
-.reward .reward-box {
+#wrapper .reward .reward-box {
   margin: 22px 30px;
   text-align: left;
 }
-.reward .reward-box .reward-img {
+#wrapper .reward .reward-box .reward-img {
   width: 40px;
   height: 40px;
   border-radius: 4px;
 }
-.reward .reward-box .reward-name {
+#wrapper .reward .reward-box .reward-name {
   display: inline-block;
   vertical-align: 12px;
   margin-left: 10px;
 }
-.reward .reward-box .reward-time-box {
+#wrapper .reward .reward-box .reward-time-box {
   display: inline-block;
   width: 73px;
   float: right;
   line-height: 40px;
 }
-.reward .reward-box .reward-time {
+#wrapper .reward .reward-box .reward-time {
   color: #9b9b9b;
   display: inline-block;
 }
-.reward-title:before {
+#wrapper .reward-title:before {
   width: 22% !important;
 }
-.reward-title:after {
+#wrapper .reward-title:after {
   width: 22% !important;
 }
-.second-title:before {
+#wrapper .second-title:before {
   content: '';
   margin-left: 15px;
   width: 32%;
@@ -319,7 +333,7 @@ button {
   border-bottom: 4px dotted #ffffff;
   vertical-align: 3px;
 }
-.second-title:after {
+#wrapper .second-title:after {
   content: '';
   margin-right: 15px;
   width: 32%;
