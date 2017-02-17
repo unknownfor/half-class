@@ -12,6 +12,10 @@ $(function () {
     //参考嘿设汇 匹配ip地址  http://91.16.0.1/hisihi-cms/api.php?s=/public/topContentV2_9/id/1263
     this.isFromApp = href.indexOf('banke-app') >= 0;  //是否来源于app
 
+    var eventName = 'click';
+    if (this.isLocal) {
+        eventName = 'touchend';
+    }
 
     //填充信息，按钮变色
     $(document).on('input', '#phone-num', function(){
@@ -51,12 +55,12 @@ $(function () {
     });
 
     //倒计时
-    var countdown = 25;
-    $(document).on('click','#phone-code-btn', function setTime() {
+    var countdown = 60;
+    $(document).on(eventName,'#phone-code-btn', function setTime() {
             if (countdown == 0) {
                 this.removeAttribute("disabled");
                 this.value = "获取验证码";
-                countdown = 25;
+                countdown = 60;
                 return;
             } else {
                 this.setAttribute("disabled", true);
@@ -71,34 +75,35 @@ $(function () {
 
     //验证码验证,合法性
 
-    //注册
-    $(document).on('click','.btn.active', function () {
-            $('#wrapper').hide();
-            addLoadingImg();
-            controlLoadingBox(true);
-            var phone = $('#phone-num').val,
-                code = $('#user-code').val;
-            $.ajax({
-                type:"POST", //提交数据的类型 POST GET
-                url:"http://XX",  //用户注册
-                data:{
-                    //手机号 短信验证码
-                    username:phone,
-                    smsId:code
-                },
-                success:function(){
-                    //成功返回之后调用的函数
-                    controlLoadingBox(false),
-                    showSuccessPage();
-                },
-                //调用出错执行的函数
-                error: function(){
-                    //请求出错处理
-                    controlLoadingBox(false),
-                    addTip(),
-                    showTips('注册不成功');
-                }
-            });
+    //注册，判断数据的合法性
+    $(document).on(eventName,'.btn.active', function () {
+        alert('123');
+            //$('#wrapper').hide();
+            //addLoadingImg();
+            //controlLoadingBox(true);
+            //var phone = $('#phone-num').val,
+            //    code = $('#user-code').val;
+            //$.ajax({
+            //    type:"POST", //提交数据的类型 POST GET
+            //    url:"http://XX",  //用户注册
+            //    data:{
+            //        //手机号 短信验证码
+            //        username:phone,
+            //        smsId:code
+            //    },
+            //    success:function(){
+            //        //成功返回之后调用的函数
+            //        controlLoadingBox(false),
+            //        showSuccessPage();
+            //    },
+            //    //调用出错执行的函数
+            //    error: function(){
+            //        //请求出错处理
+            //        controlLoadingBox(false),
+            //        addTip(),
+            //        showTips('注册不成功');
+            //    }
+            //});
     });
 
 

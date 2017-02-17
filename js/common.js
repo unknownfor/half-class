@@ -1,17 +1,27 @@
 
 $(document).ready(function () {
 
+    FastClick.attach(document.body);
 
     var href = window.location.href,
         reg = /(\d+)\.(\d+)\.(\d+)\.(\d+)/;
     // 匹配ip地址  http://91.16.0.1/hisihi-cms/api.php?s=/public/topContentV2_9/id/1263  参考嘿设汇
     this.isFromApp = href.indexOf('banke-app') >= 0;  //是否来源于app
 
+    FastClick.attach(document.body);
+
+    this.isLocal=false; //是否是本地调试来源于app  ，由于fastClick浏览器调试时，事件不方便，添加只是方便浏览器调式，以及本地取测试数据
+
+    if(reg.test(href) || href.indexOf('localhost') >= 0){
+        this.isLocal=true;
+    }
+
+
     //添加下载条
     window.downloadBar = function() {
-        if (downloadBar.show && !this.isFromApp) {
-            return;
-        }
+        //if (downloadBar.show && !this.isFromApp) {
+        //    return;
+        //}
         var str = '<div id="downloadCon">' +
             '<a id="downloadBar" href="http://www.hisihi.com/download.php">' +
             '<img id="downloadBar-img" src="http://pic.hisihi.com/2017-01-18/1484705240013582.png" />' +
@@ -119,6 +129,7 @@ $(document).ready(function () {
         $p.text('');
         this.timeOutFlag = false;
     };
+
 
 });
 
