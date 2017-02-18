@@ -2,16 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53ad3ca2-340d-41be-9618-78f954522788" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/class-detail.html" afterPath="$PROJECT_DIR$/index/class-detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/class-detail/class-detail.less" afterPath="$PROJECT_DIR$/css/class-detail/class-detail.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/common.js" afterPath="$PROJECT_DIR$/js/common.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/class-detail/home.css" afterPath="$PROJECT_DIR$/css/class-detail/home.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/information.html" afterPath="$PROJECT_DIR$/index/information.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/organization.css" afterPath="$PROJECT_DIR$/css/organization.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/organization.html" afterPath="$PROJECT_DIR$/index/organization.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/organization.less" afterPath="$PROJECT_DIR$/css/organization.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/wechat/wechat.js" afterPath="$PROJECT_DIR$/js/wechat/wechat.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/wechat2.html" afterPath="$PROJECT_DIR$/index/wechat2.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -276,7 +266,7 @@
     <option name="totallyTimeSpent" value="143601000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1064" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1064" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1459893" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
