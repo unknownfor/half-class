@@ -1,0 +1,236 @@
+html {
+  height:100%;
+}
+body {
+  margin:0;
+  padding:0;
+  overflow: hidden;
+  color: #9b9b9b;
+  .size(100%,100%);
+}
+#invitation{
+  .size(100%,100%);
+  text-align: center;
+  transition: -webkit-transform 0.5s ease;
+  transform: translate(0px, 0px);
+  @bc:  #FBC02D;
+  .container {
+    height:100%;
+    overflow: hidden;
+  }
+  .page {
+    //width: 100%;
+    height: 100%;
+    @rbh: 35px;
+    @rbr:10px;
+    //-webkit-backface-visibility: hidden;
+    //-webkit-perspective: 1000;
+    padding: 0px 20px;
+    hr {
+      margin: 5px 0;
+      height: @rbh - 10px;
+    }
+    .txt {
+      letter-spacing: 1px;
+      &.slogen {
+        padding: 15px 0;
+        font-size: 18px;
+        font-weight: 500;
+        color: #000;
+      }
+      &.detail {
+        margin-bottom: 20px;
+        font-size: 12px;
+      }
+      &.txt-one {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+      &.txt-two {
+        font-size: 18px;
+        font-weight: 500;
+        color: #000;
+      }
+      &.txt-three {
+        margin-top: -10px;
+        margin-bottom: 50px;
+        font-size: 14px;
+      }
+      .save-tel {
+        color: #4a90e2;
+      }
+      .save-num {
+        color: #FBC02D;
+      }
+      .reward {
+        color: #FBC02D;
+        font-size: 20px;
+      }
+    }
+    .register {
+      .register-box {
+        border-radius: @rbr;
+        display: flex;
+        background-color: #F2F2F2;
+        margin-bottom: 10px;
+        .register-img {
+          .size(@rbh,@rbh);
+          font-size: 18px;
+          display: flex;
+          justify-items: center;
+          align-items: center;
+          justify-content: center;
+        }
+        .register-code {
+          flex: 3;
+          border-radius: @rbr;
+          height: @rbh;
+          padding: 0px;
+          border: none;
+          background-color: #F2F2F2;
+        }
+        .code-btn {
+          flex: 0 2 90px;
+          padding: 0;
+          margin: 0;
+          border: 0;
+          outline: 0;
+          text-align: center;
+          background-color: rgba(255, 255, 255, 0);
+          border-radius: @rbr;
+          color: #9a9a9a;
+          line-height: @rbh;
+          -webkit-box-flex: 0;
+        }
+        &.active {
+          > i {
+            color: #FFEB3B;
+          }
+          //获取验证码短竖杠颜色
+          hr {
+            color: #FFEB3B;
+          }
+          background-color: #FFFBD8;
+          .register-code {
+            background-color: #FFFBD8;
+          }
+        }
+      }
+    }
+    .arrow{
+      position: absolute;
+      .size(30px,30px);
+      left: 45%;
+      right: 45%;
+      bottom: 2px;
+      color: #FFEB3B;
+      background-size: 33px auto;
+      > i {
+        font-size: 26px;
+      }
+    }
+    .bg {
+      max-height: 195px;
+      margin-bottom: 10px;
+      &.second {
+        margin-top: 34%;
+      }
+      &.third {
+        margin-top: 10%;
+      }
+    }
+    .btn {
+      text-align: center;
+      width: 100%;
+      height: @rbh;
+      line-height: @rbh;
+      color: #ffffff;
+      border-radius: @rbr;
+      border: none;
+      &.gift {
+        background-color: #9b9b9b;
+      }
+      &.download {
+        background-color: @bc;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: @rbh+@rbr;
+      }
+      &.active {
+        background-color: @bc;
+      }
+      &.nouse {
+        pointer-events:none;
+      }
+      > a {
+        display: block;
+        color: #FFFFFF;
+        width: 100%;
+        height: @rbh;
+        font-size: 14px;
+      }
+    }
+    .box {
+      text-align: left;
+      font-size: 14px;
+      .box-title {
+        color: #FBC02D;
+        margin-bottom: 5px;
+      }
+      .box-info {
+        line-height: 22px;
+      }
+      &.first {
+        margin-bottom: 20px;
+      }
+    }
+    &:last-child {
+      .arrow {
+        display: none;
+      }
+    }
+    .register-done {
+      &.hide {
+        display: none;
+      }
+    }
+  }
+  .current {
+    .arrow {
+      -webkit-animation: swipeMoveTop 1.5s 1s ease infinite;
+    }
+    .txt{
+      -webkit-animation: slideToTop .8s ease both;
+    }
+    .subtitle{
+      -webkit-animation: slideToTop .8s 0.3s ease both;
+    }
+  }
+}
+
+/*上滑提示*/
+@-webkit-keyframes swipeMoveTop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10px, 0);
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -10px, 0);
+  }
+}
+@media screen and (max-width:320px){
+  #invitation .page .arrow {
+    bottom: 0;
+    > i {
+      font-size: 22px;
+    }
+  }
+
+}

@@ -1,107 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="Resource-type" content="Document">
-    <!--禁止缩放-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <!--禁止数字识别为手机号-->
-    <meta name="format-detection" content="telephone=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta http-equiv="Expires" content="0">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Cache-control" content="no-cache">
-    <meta http-equiv="Cache" content="no-cache">
-    <link type="text/css" href="../css/wechat/home.css" rel="stylesheet">
-    <title>微信注册</title>
+    <meta charset="utf-8">
+    <title></title>
 </head>
+<style type="text/css">
+    .btn {
+        text-align: center;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        color: #ffffff;
+        border-radius: 10px;
+        border: none;
+        background-color: #ffc;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        bottom: 50px;
+        pointer-events:none;
+    }
+    a {
+          display: block;
+          color: #FFFFFF;
+          width: 100%;
+          height: 40px;
+      }
+</style>
 <body>
-<div id="wrapper">
-<!--顶部图片-->
-<div class="head">
-    <img src="../img/wehchat/bg_top.png" />
-</div>
-<!--手机注册-->
-<div class="register">
-    <div class="register-box phone">
-        <div class="register-img phone-img"></div>
-        <input class="register-code" id="phone-num" placeholder="输入手机号"/>
-        <hr color="#FFE747" />
-        <input class="code-btn disabled" type="button" id="phone-code-btn" value="获取验证码"/>
-    </div>
-    <div class="register-box code">
-        <div class="register-img code-img"></div>
-        <input class="register-code" id="user-code" placeholder="验证码" />
-    </div>
-    <div class="btn">注册获得20元现金</div>
-</div>
-<!--领取优惠券-->
-<div class="coupon hide">
-    <div class="coupon-box">
-        <img class="ticket" id="one" src="../img/wehchat/20.png" />
-        <img class="ticket" id="two" src="../img/wehchat/50.png">
-        <div class="coupon-count">奖励已放至账户<span>18140662282</span></div>
-        <a href="http://www.hisihi.com/download.php" >
-            <div class="btn-active">下载半课领取</div>
-        </a>
-    </div>
-</div>
-<!--朋友获得奖励-->
-<div class="reward">
-    <div class="second-title reward-title"><span>哪些朋友获得了奖励</span></div>
-        <div class="reward-box">
-            <img class="reward-img"  src="../img/4.png"/>
-            <span class="reward-name">彭梦婷</span>
-            <div class="reward-time-box">
-                <span class="reward-time">2017-01-17</span>
-            </div>
-        </div>
-    <div class="reward-box">
-        <img class="reward-img"  src="../img/1.jpg"/>
-        <span class="reward-name">王伟</span>
-        <div class="reward-time-box">
-            <span class="reward-time">2017-01-18</span>
-        </div>
-    </div>
-    <div class="reward-box">
-        <img class="reward-img"  src="../img/2.png"/>
-        <span class="reward-name">潘潇</span>
-        <div class="reward-time-box">
-            <span class="reward-time">2017-01-18</span>
-        </div>
-    </div>
-    <div class="reward-box">
-        <img class="reward-img"  src="../img/3.jpg"/>
-        <span class="reward-name">林海</span>
-        <div class="reward-time-box">
-            <span class="reward-time">2017-01-21</span>
-        </div>
-    </div>      <div class="reward-box">
-    <img class="reward-img"  src="../img/5.jpg"/>
-    <span class="reward-name">雷军</span>
-    <div class="reward-time-box">
-        <span class="reward-time">2017-01-22</span>
-    </div>
-</div>
-</div>
-<!--活动细则-->
-<div class="activity">
-    <div class="second-title activity-head"><span>活动细则</span></div>
-    <img src="../img/wehchat/bg_down.png" />
-    <div class="activity-txt">
-        <div class="txt">1.新用户通过此页面注册会获得20元现金；</div>
-        <div class="txt">2.需下载半课app，登陆并认证；</div>
-        <div class="txt">3.提现流程参见半课app；</div>
-        <div class="txt">4.参加学习计划最高可获得学费50%奖励；</div>
-        <div class="txt">5.半课保留法律范围内允许的对活动的解释权。</div>
-    </div>
-</div>
-<!--遮罩-->
-<div class="mask"></div>
-</div>
+<button class="btn"><a id="downloadBar" href="http://www.91banke.com/web/download">领取奖励</a></button>
 </body>
-<script src="../js/sharecommon/zepto.min.js" type="text/javascript"></script>
-<script src="../js/sharecommon/fastclick.js" type="text/javascript"></script>
-<script src="../js/common.js" type="text/javascript"></script>
-<script src="../js/wechat/wechat.js"></script>
 </html>

@@ -1,0 +1,198 @@
+.size(@width: 100%,@height: 100%){
+  width: @width;
+  height: @height;
+}
+.border-radius(@r:3px){
+  border-radius: @r;
+  background-clip: padding-box;
+}
+.middle-absolute(@l,@t){
+  position: absolute;
+  top:50%;
+  left: 50%;
+  margin-top: -@t;
+  margin-left: -@l;
+}
+//文字省略
+.txt-ellipsis{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.txt-ellipsis-p(@line-num:10,@type:ellipsis){
+  text-overflow: @type;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @line-num;
+}
+
+a {
+  display:block;
+  text-decoration: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+//禁止页面长按复制
+*{
+  -webkit-touch-callout:none;  /*系统默认菜单被禁用*/
+  -webkit-user-select:none; /*webkit浏览器*/
+  -khtml-user-select:none; /*早期浏览器*/
+  -moz-user-select:none;/*火狐*/
+  -ms-user-select:none; /*IE10*/
+  user-select:none;
+}
+//html,body {
+//  height: 100%;
+//}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+input {
+  //禁止页面长按复制可能会影响IOS输入框功能
+  -webkit-user-select:auto; /*webkit浏览器*/
+  -webkit-appearance: textfield;
+  background-color: white;
+  -webkit-rtl-ordering: logical;
+  user-select: text;
+  cursor: auto;
+  padding: 1px;
+  border-image: initial;
+  text-rendering: auto;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  margin: 0em 0em 0em 0em;
+  font: 13.3333px Arial;
+  outline: none;
+}
+
+
+
+//下载条
+#downloadCon{
+  margin: 0 auto;
+  max-width: 700px;
+  //width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  opacity: 1;
+  max-height: 113px;
+  display: inline-block;
+  background-color: #FFEB3B;
+  .downloadBar-img {
+    max-width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    opacity: 0;
+    display: inline-block;
+  }
+  a {
+    display:block;
+    text-decoration: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 420px){
+  #downloadCon {
+    height: 78px;
+  }
+}
+@media screen and (max-width: 380px){
+  #downloadCon {
+    height: 71px;
+  }
+}
+@media screen and (max-width: 320px){
+  #downloadCon {
+    height: 61px;
+  }
+}
+
+
+//提示框
+.result-tips {
+  @w:160px;
+  @h:34px;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  .size(@w,auto);
+  min-height: @h;
+  z-index: 1001;
+  min-height: 34px;
+  background: rgba(51, 51, 51, 0.85);
+  margin-left: -@w / 2;
+  margin-top: -35px;
+  border-radius: 3px;
+  background-clip: padding-box;
+  color: #fff;
+  text-align: center;
+  //display: none;
+  p {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    margin: 10px 0;
+  }
+}
+
+//加载动画
+#loading-data {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  top: 50%;
+  left: 50%;
+  z-index: 55555;
+  text-align: center;
+  display: none;
+  &.active {
+    display: block;
+    .loding-img {
+      -webkit-animation: turning 1s linear infinite;
+      -moz-animation: turning 1s linear infinite;
+    }
+  }
+  .loding-img {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+  }
+}
+@keyframes turning {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes turning {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes turning {
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}

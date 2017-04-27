@@ -1,29 +1,30 @@
 
-$(document).ready(function () {
-
+$(function () {
     FastClick.attach(document.body);
-
     var href = window.location.href,
         reg = /(\d+)\.(\d+)\.(\d+)\.(\d+)/;
     // 匹配ip地址  http://91.16.0.1/hisihi-cms/api.php?s=/public/topContentV2_9/id/1263  参考嘿设汇
-    this.isFromApp = href.indexOf('banke-app') >= 0;  //是否来源于app
-
-    FastClick.attach(document.body);
-
-    this.isLocal=false; //是否是本地调试来源于app  ，由于fastClick浏览器调试时，事件不方便，添加只是方便浏览器调式，以及本地取测试数据
-
-    if(reg.test(href) || href.indexOf('localhost') >= 0){
-        this.isLocal=true;
+    var isFromApp = href.indexOf('banke-app') >= 0;  //是否来源于app
+    window.isLocal=false; //是否是本地调试来源于app  ，由于fastClick浏览器调试时，事件不方便，添加只是方便浏览器调式，以及本地取测试数据
+    if(reg.test(href) || href.indexOf('http://admin.laadmin.dev/') >= 0){
+        window.isLocal=true;
     }
+    window.eventName = 'click';
+    if (this.isLocal) {
+        window.eventName = 'touchend';
+    }
+    //downloadBar();
+    setFootStyle();
 
+    window.deviceType = operationType();
 
     //添加下载条
-    window.downloadBar = function() {
-        //if (downloadBar.show && !this.isFromApp) {
-        //    return;
-        //}
+    function downloadBar() {
+        if (isFromApp) {
+            return;
+        }
         var str = '<div id="downloadCon">' +
-            '<a id="downloadBar" href="http://www.hisihi.com/download.php">' +
+            '<a id="downloadBar" href="http://www.91banke.com/web/download">' +
             '<img id="downloadBar-img" src="http://pic.hisihi.com/2017-01-18/1484705240013582.png" />' +
             '</a>' +
             '</div>';
@@ -31,14 +32,14 @@ $(document).ready(function () {
     }
 
     //设置底部下载条高度样式
-    window.setFootStyle = function() {
-        //if(this.isFromApp) {
-        //    return ;
-        //}
+    function setFootStyle () {
+        if(isFromApp) {
+            return ;
+        }
         var $target = $('#downloadCon'),
             h = $target.height();
         $target.css({ 'opacity': 1});
-        $('body').css({'margin-bottom': h +'px'});
+        $('body').css('padding-bottom',h +'px');
         return h;
     }
 
@@ -128,9 +129,44 @@ $(document).ready(function () {
         $tip.hide();
         $p.text('');
         this.timeOutFlag = false;
+    },
+
+
+    /*
+     * 禁止(恢复)滚动
+     * para：
+     * flag - {bool} 允许（true）或者禁止（false）滚动
+     * $target - {jquery obj} 滚动对象
+     */
+    window.scrollControl = function(flag,$target){
+        if(!flag) {
+            $target = $target || $('body');
+            this.scrollTop = $target.scrollTop();
+            $('html,body').addClass('noscroll');
+        }else{
+            $('html,body').removeClass('noscroll');
+            window.scrollTo(0, this.scrollTop);
+        }
     };
 
 
+    /*
+     *判断webview的来源
+     */
+    function operationType() {
+        var u = navigator.userAgent, app = navigator.appVersion;
+        return { //移动终端浏览器版本信息
+            trident: u.indexOf('Trident') > -1, //IE内核
+            presto: u.indexOf('Presto') > -1, //opera内核
+            webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+            gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+            mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+            ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+            android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+            iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+            iPad: u.indexOf('iPad') > -1, //是否iPad
+            webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+        };
+    };
+
 });
-
-
