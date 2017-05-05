@@ -13,7 +13,7 @@ $(function () {
     //安卓下键盘弹出会导致页面resize的，监听resize事件,
     // var HEIGHT = $(window).height();
     // $(window).resize(function() {
-        // $('.page').height(HEIGHT);
+    //     $('.page').height(HEIGHT);
     // });
 
     //填充信息，按钮变色

@@ -26,12 +26,6 @@ a {
 ul {
   list-style: none;
 }
-a {
-  text-decoration: none;
-  border: 0;
-  padding: 0;
-  margin: 0;
-}
 input {
   -webkit-user-select: auto;
   /*webkit浏览器*/
@@ -164,6 +158,8 @@ input {
 }
 html {
   height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 body {
   margin: 0;
@@ -182,6 +178,7 @@ body {
   -webkit-transform: translate(0px, 0px);
   -ms-transform: translate(0px, 0px);
   transform: translate(0px, 0px);
+  position: relative;
 }
 #invitation .container {
   height: 100%;
@@ -189,7 +186,9 @@ body {
 }
 #invitation .page {
   height: 100%;
-  padding: 0px 20px;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  margin: 0 20px;
 }
 #invitation .page hr {
   margin: 5px 0;
@@ -197,6 +196,7 @@ body {
 }
 #invitation .page .txt {
   letter-spacing: 1px;
+  opacity: 0 ;
 }
 #invitation .page .txt.slogen {
   padding: 15px 0;
@@ -209,8 +209,7 @@ body {
   font-size: 12px;
 }
 #invitation .page .txt.txt-one {
-  margin-top: 30px;
-  margin-bottom: 10px;
+  padding: 30px 0 10px 0;
   font-size: 14px;
 }
 #invitation .page .txt.txt-two {
@@ -287,6 +286,9 @@ body {
   line-height: 35px;
   -webkit-box-flex: 0;
 }
+#invitation .page .register .register-box .code-btn.disabled {
+  pointer-events: none;
+}
 #invitation .page .register .register-box.active {
   background-color: #FFFBD8;
 }
@@ -316,9 +318,11 @@ body {
 #invitation .page .bg {
   max-height: 195px;
   margin-bottom: 10px;
+  opacity: 0;
 }
 #invitation .page .bg.second {
   margin-top: 34%;
+  opacity: 0;
 }
 #invitation .page .bg.third {
   margin-top: 10%;
@@ -331,6 +335,7 @@ body {
   color: #ffffff;
   border-radius: 10px;
   border: none;
+  opacity: 0;
 }
 #invitation .page .btn.gift {
   background-color: #9b9b9b;
@@ -341,6 +346,7 @@ body {
   left: 0;
   right: 0;
   bottom: 45px;
+  opacity: 0;
 }
 #invitation .page .btn.active {
   background-color: #fbc02d;
@@ -358,6 +364,7 @@ body {
 #invitation .page .box {
   text-align: left;
   font-size: 14px;
+  opacity: 0 ;
 }
 #invitation .page .box .box-title {
   color: #FBC02D;
@@ -378,11 +385,47 @@ body {
 #invitation .current .arrow {
   -webkit-animation: swipeMoveTop 1.5s 1s ease infinite;
 }
-#invitation .current .txt {
+#invitation .current .bg {
+  -webkit-animation: slideToTop .9s 0.6s ease both;
+}
+#invitation .current .bg.second {
+  -webkit-animation: slideToTop .9s ease both;
+}
+#invitation .current .bg.third {
+  -webkit-animation: slideToTop .9s ease both;
+}
+#invitation .current .register-box.phone {
+  -webkit-animation: slideToTop .9s 0.2s ease both;
+}
+#invitation .current .register-box.code-num {
+  -webkit-animation: slideToTop .9s 0.3s ease both;
+}
+#invitation .current .register-box.password {
+  -webkit-animation: slideToTop .9s 0.4s ease both;
+}
+#invitation .current .btn {
+  -webkit-animation: slideToTop .9s 0.6s ease both;
+}
+#invitation .current .txt.slogen {
   -webkit-animation: slideToTop .8s ease both;
 }
-#invitation .current .subtitle {
+#invitation .current .txt.detail {
   -webkit-animation: slideToTop .8s 0.3s ease both;
+}
+#invitation .current .txt.txt-one {
+  -webkit-animation: slideToTop .8s 0.2s ease both;
+}
+#invitation .current .txt.txt-two {
+  -webkit-animation: slideToTop .8s 0.5s ease both;
+}
+#invitation .current .txt.txt-three {
+  -webkit-animation: slideToTop .8s 0.7s ease both;
+}
+#invitation .current .box.first {
+  -webkit-animation: slideToTop .9s 0.2s ease both;
+}
+#invitation .current .box.second {
+  -webkit-animation: slideToTop .9s 0.4s ease both;
 }
 /*上滑提示*/
 @-webkit-keyframes swipeMoveTop {
@@ -397,6 +440,16 @@ body {
   100% {
     opacity: 0;
     -webkit-transform: translate3d(0, -10px, 0);
+  }
+}
+@-webkit-keyframes slideToTop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
   }
 }
 @media screen and (max-width: 320px) {

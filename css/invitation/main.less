@@ -1,37 +1,42 @@
 html {
   height:100%;
+  width: 100%;
+  overflow: hidden;
 }
 body {
   margin:0;
   padding:0;
   overflow: hidden;
   color: #9b9b9b;
-  .size(100%,100%);
+  width: 100%;
+  height: 100%;
 }
 #invitation{
-  .size(100%,100%);
+  width: 100%;
+  height: 100%;
   text-align: center;
   transition: -webkit-transform 0.5s ease;
   transform: translate(0px, 0px);
   @bc:  #FBC02D;
+  position: relative;
   .container {
     height:100%;
     overflow: hidden;
   }
   .page {
-    //width: 100%;
     height: 100%;
     @rbh: 35px;
     @rbr:10px;
-    //-webkit-backface-visibility: hidden;
-    //-webkit-perspective: 1000;
-    padding: 0px 20px;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    margin: 0 20px;
     hr {
       margin: 5px 0;
       height: @rbh - 10px;
     }
     .txt {
       letter-spacing: 1px;
+      opacity: 0 ;
       &.slogen {
         padding: 15px 0;
         font-size: 18px;
@@ -43,8 +48,7 @@ body {
         font-size: 12px;
       }
       &.txt-one {
-        margin-top: 30px;
-        margin-bottom: 10px;
+        padding: 30px 0 10px 0;
         font-size: 14px;
       }
       &.txt-two {
@@ -75,7 +79,8 @@ body {
         background-color: #F2F2F2;
         margin-bottom: 10px;
         .register-img {
-          .size(@rbh,@rbh);
+          width:  @rbh;
+          height: @rbh;
           font-size: 18px;
           display: flex;
           justify-items: center;
@@ -102,6 +107,9 @@ body {
           color: #9a9a9a;
           line-height: @rbh;
           -webkit-box-flex: 0;
+          &.disabled {
+            pointer-events: none;
+          }
         }
         &.active {
           > i {
@@ -120,7 +128,8 @@ body {
     }
     .arrow{
       position: absolute;
-      .size(30px,30px);
+      width: 30px;
+      height: 30px;
       left: 45%;
       right: 45%;
       bottom: 2px;
@@ -133,11 +142,14 @@ body {
     .bg {
       max-height: 195px;
       margin-bottom: 10px;
+      opacity: 0;
       &.second {
         margin-top: 34%;
+        opacity: 0;
       }
       &.third {
         margin-top: 10%;
+        opacity: 0;
       }
     }
     .btn {
@@ -148,6 +160,7 @@ body {
       color: #ffffff;
       border-radius: @rbr;
       border: none;
+      opacity: 0;
       &.gift {
         background-color: #9b9b9b;
       }
@@ -157,6 +170,7 @@ body {
         left: 0;
         right: 0;
         bottom: @rbh+@rbr;
+        opacity: 0;
       }
       &.active {
         background-color: @bc;
@@ -175,6 +189,7 @@ body {
     .box {
       text-align: left;
       font-size: 14px;
+      opacity: 0 ;
       .box-title {
         color: #FBC02D;
         margin-bottom: 5px;
@@ -197,15 +212,58 @@ body {
       }
     }
   }
+  //当前页面动画效果
   .current {
     .arrow {
       -webkit-animation: swipeMoveTop 1.5s 1s ease infinite;
     }
-    .txt{
-      -webkit-animation: slideToTop .8s ease both;
+    .bg {
+      -webkit-animation: slideToTop .9s 0.6s ease both;
+      &.second {
+        -webkit-animation: slideToTop .9s ease both;
+      }
+      &.third {
+        -webkit-animation: slideToTop .9s ease both;
+      }
     }
-    .subtitle{
-      -webkit-animation: slideToTop .8s 0.3s ease both;
+    .register-box {
+      &.phone {
+        -webkit-animation: slideToTop .9s 0.2s ease both;
+      }
+      &.code-num {
+        -webkit-animation: slideToTop .9s 0.3s ease both;
+      }
+      &.password {
+        -webkit-animation: slideToTop .9s 0.4s ease both;
+      }
+    }
+    .btn {
+      -webkit-animation: slideToTop .9s 0.6s ease both;
+    }
+    .txt  {
+      &.slogen {
+        -webkit-animation: slideToTop .8s ease both;
+      }
+      &.detail{
+        -webkit-animation: slideToTop .8s 0.3s ease both;
+      }
+      &.txt-one {
+        -webkit-animation: slideToTop .8s 0.2s ease both;
+      }
+      &.txt-two {
+        -webkit-animation: slideToTop .8s 0.5s ease both;
+      }
+      &.txt-three {
+        -webkit-animation: slideToTop .8s 0.7s ease both;
+      }
+    }
+    .box {
+      &.first {
+        -webkit-animation: slideToTop .9s 0.2s ease both;
+      }
+      &.second {
+        -webkit-animation: slideToTop .9s 0.4s ease both;
+      }
     }
   }
 }
@@ -223,6 +281,16 @@ body {
   100% {
     opacity: 0;
     -webkit-transform: translate3d(0, -10px, 0);
+  }
+}
+@-webkit-keyframes slideToTop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
   }
 }
 @media screen and (max-width:320px){
