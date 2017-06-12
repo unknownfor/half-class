@@ -10,9 +10,9 @@ $(function () {
         window.isLocal=true;
     }
     window.eventName = 'click';
-    if (this.isLocal) {
-        window.eventName = 'touchend';
-    }
+    // if (this.isLocal) {
+    //     window.eventName = 'touchend';
+    // }
     //downloadBar();
     setFootStyle();
 
@@ -150,6 +150,8 @@ $(function () {
     };
 
 
+
+
     /*
      *判断webview的来源
      */
@@ -170,3 +172,23 @@ $(function () {
     };
 
 });
+
+//请求数据
+window.getDataAsync=function(url,data,callback,eCallback,type){
+    type = type ||'get';
+    data._token=$('input[name="_token"]').val();
+    $.ajax({
+        type: type,
+        url: url,
+        data: data,
+        success: function (res) {
+            callback(res);
+        },
+        error: function () {
+            //请求出错处理
+            window.controlLoadingBox(false),
+                window.showTips('操作失败');
+            eCallback && eCallback();
+        }
+    });
+}

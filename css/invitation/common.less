@@ -13,6 +13,10 @@
   margin-top: -@t;
   margin-left: -@l;
 }
+* {
+  margin: 0;
+  padding: 0;
+}
 //文字省略
 .txt-ellipsis{
   text-overflow: ellipsis;
@@ -30,6 +34,7 @@
 a {
   display:block;
   text-decoration: none;
+  out-line: none;
   border: 0;
   padding: 0;
   margin: 0;
@@ -45,6 +50,16 @@ a {
 }
 ul {
   list-style: none;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: #fff;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+a:hover {
+  -webkit-tap-highlight-color:transparent;
 }
 input {
   //禁止页面长按复制可能会影响IOS输入框功能

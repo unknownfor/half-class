@@ -1,0 +1,563 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.txt-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+a {
+  display: block;
+  text-decoration: none;
+  out-line: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+* {
+  -webkit-touch-callout: none;
+  /*系统默认菜单被禁用*/
+  -webkit-user-select: none;
+  /*webkit浏览器*/
+  -khtml-user-select: none;
+  /*早期浏览器*/
+  -moz-user-select: none;
+  /*火狐*/
+  -ms-user-select: none;
+  /*IE10*/
+  user-select: none;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: #fff;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+a:hover {
+  -webkit-tap-highlight-color: transparent;
+}
+input {
+  -webkit-user-select: auto;
+  /*webkit浏览器*/
+  -webkit-appearance: textfield;
+  background-color: white;
+  -webkit-rtl-ordering: logical;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+  cursor: auto;
+  padding: 1px;
+  -webkit-border-image: initial;
+  -o-border-image: initial;
+  border-image: initial;
+  text-rendering: auto;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  margin: 0em 0em 0em 0em;
+  font: 13.3333px Arial;
+  outline: none;
+}
+#downloadCon {
+  margin: 0 auto;
+  max-width: 700px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  opacity: 1;
+  max-height: 113px;
+  display: inline-block;
+  background-color: #FFEB3B;
+}
+#downloadCon .downloadBar-img {
+  max-width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  opacity: 0;
+  display: inline-block;
+}
+#downloadCon a {
+  display: block;
+  text-decoration: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+@media screen and (max-width: 420px) {
+  #downloadCon {
+    height: 78px;
+  }
+}
+@media screen and (max-width: 380px) {
+  #downloadCon {
+    height: 71px;
+  }
+}
+@media screen and (max-width: 320px) {
+  #downloadCon {
+    height: 61px;
+  }
+}
+.result-tips {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  width: 160px;
+  height: auto;
+  z-index: 1001;
+  min-height: 34px;
+  background: rgba(51, 51, 51, 0.85);
+  margin-left: -80px;
+  margin-top: -35px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  color: #fff;
+  text-align: center;
+}
+.result-tips p {
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  margin: 10px 0;
+}
+#loading-data {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  top: 50%;
+  left: 50%;
+  z-index: 55555;
+  text-align: center;
+  display: none;
+}
+#loading-data.active {
+  display: block;
+}
+#loading-data.active .loding-img {
+  -webkit-animation: turning 1s linear infinite;
+  -moz-animation: turning 1s linear infinite;
+}
+#loading-data .loding-img {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+@keyframes turning {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes turning {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  overflow-x: hidden;
+}
+#invitation {
+  margin: 0 auto;
+  max-width: 700px;
+  height: 100%;
+  overflow-x: hidden;
+  font-size: 14px;
+}
+#invitation .line {
+  height: 15px;
+  background-color: #F2F2F2;
+}
+#invitation .box {
+  background-color: #ffffff;
+}
+#invitation .box.user {
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+}
+#invitation .box.user .head-bg {
+  height: 180px;
+  width: 100%;
+  position: relative;
+}
+#invitation .box.user .head-img {
+  position: absolute;
+  top: 140px;
+  margin: 0 auto;
+  width: 100%;
+}
+#invitation .box.user .head-img > img {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  border-radius: 70px;
+  border: 3px solid #ffffff;
+}
+#invitation .box.user .info-box {
+  padding: 15px;
+}
+#invitation .box.user .info-box .txt-one {
+  color: #383D43;
+  margin: 30px 0px 5px 0px;
+}
+#invitation .box.user .info-box .txt-one > span {
+  font-weight: bold;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#invitation .box.user .info-box .txt-two {
+  font-weight: bold;
+  color: #fa4535;
+  padding-bottom: 25px;
+}
+#invitation .box.user .info-box .org-name {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  text-align: left;
+  margin-bottom: 10px;
+}
+#invitation .box.user .info-box .class {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+#invitation .box.user .info-box .class .class-left {
+  box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-box-flex: 1;
+  margin-right: 7px;
+}
+#invitation .box.user .info-box .class .class-left > a {
+  display: inline-block;
+}
+#invitation .box.user .info-box .class .class-left > a > img {
+  max-width: 60px;
+  border-radius: 7px;
+}
+#invitation .box.user .info-box .class .class-middle {
+  width: 34%;
+  font-size: 14px;
+  margin-left: 8px;
+  padding-top: 10px;
+  text-align: left;
+}
+#invitation .box.user .info-box .class .class-middle .name {
+  color: #383D43;
+  margin-bottom: 6px;
+  display: inline-block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+#invitation .box.user .info-box .class .class-middle .save .save-img {
+  display: inline-block;
+  width: 19.2px;
+  height: 19.8px;
+  background: url("http://pic.hisihi.com/2017-05-10/1494404430394783.png") no-repeat 0 0;
+  -webkit-background-size: 19.2px 19.8px;
+  background-size: 19.2px 19.8px;
+}
+#invitation .box.user .info-box .class .class-middle .save .save-num {
+  color: #FA4535;
+  vertical-align: 5px;
+}
+#invitation .box.user .info-box .class .class-right {
+  position: absolute;
+  top: -12px;
+  right: 0px;
+  text-align: right;
+  font-size: 12px;
+}
+#invitation .box.user .info-box .class .class-right .price {
+  margin-bottom: 10px;
+  display: inline-block;
+  vertical-align: -22px;
+}
+#invitation .box.user .info-box .class .class-right .price-info {
+  color: #9B9B9B;
+  padding-right: 5px;
+}
+#invitation .box.user .info-box .class .class-right #price-num {
+  color: #383D43;
+}
+#invitation .box.user .info-box .class .class-right #price-real-num {
+  color: #FA4535;
+}
+#invitation .box.join {
+  padding: 15px;
+  text-align: center;
+}
+#invitation .box.join .slogen {
+  margin: 10px auto;
+  color: #fbc02d;
+  font-size: 18px;
+}
+#invitation .box.join .btn {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  display: inline-block;
+  width: 90%;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #fbc02d;
+  line-height: 40px;
+  color: #ffffff;
+}
+#invitation .box.join .txt {
+  margin-bottom: 30px;
+}
+#invitation .box.join .txt > a {
+  color: #9b9b9b;
+}
+#invitation .box.join .txt > a > i {
+  vertical-align: -1px;
+}
+#invitation .box.hide {
+  display: none;
+}
+#invitation .box.line {
+  height: 15px;
+  background-color: #F2F2F2;
+}
+#invitation .box1 {
+  opacity: 0;
+  -webkit-animation: slideToTop .5s ease both;
+  background-color: #ffffff;
+  padding: 30px;
+}
+#invitation .box1.process > h3 {
+  font-weight: normal;
+  color: #383d43;
+  margin-bottom: 15px;
+}
+#invitation .box1.process .rules {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #9b9b9b;
+}
+#invitation .box1.process .rules .num {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 20px;
+  -ms-flex: 0 0 20px;
+  flex: 0 0 20px;
+  margin-right: 10px;
+  -webkit-box-shadow: 0px 2px 6px #fbc02d;
+  box-shadow: 0px 2px 6px #fbc02d;
+  font-size: 10px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: #fbc02d;
+  line-height: 20px;
+  text-align: center;
+  color: #fff;
+  vertical-align: 1px;
+}
+#invitation .box1.process .rules .txt {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+#invitation .box1.process .rules.first {
+  color: #383d43;
+}
+#invitation .box1.process .dotted {
+  color: #E5E5E5;
+  margin-top: 5px;
+  margin-left: 3px;
+}
+#invitation .box1.register {
+  text-align: center;
+}
+#invitation .box1.register .phone {
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #F2F2F2;
+  margin: 20px 0;
+}
+#invitation .box1.register .phone .register-img {
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+#invitation .box1.register .phone .register-code {
+  -webkit-box-flex: 3;
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  border-radius: 10px;
+  height: 45px;
+  padding: 0px;
+  border: none;
+  background-color: #F2F2F2;
+}
+#invitation .box1.register .phone .register-code:active {
+  outline: none;
+}
+#invitation .box1.register .phone.active {
+  background-color: #FFFBD8;
+}
+#invitation .box1.register .phone.active > i {
+  color: #FFEB3B;
+}
+#invitation .box1.register .phone.active .register-code {
+  background-color: #FFFBD8;
+}
+#invitation .box1.register .btn {
+  font-size: 14px;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  color: #ffffff;
+  border-radius: 10px;
+  background-color: rgba(250, 192, 46, 0.5);
+  border: none;
+}
+#invitation .box1.register .btn.active {
+  background-color: #FAC02E;
+}
+#invitation .box1.register .btn.nouse {
+  pointer-events: none;
+}
+#invitation .box1.register > p {
+  padding: 15px 0;
+  color: #a5a5a5;
+}
+#invitation .box1.register > p.active {
+  color: #FBC02D;
+}
+#invitation .box1.hide {
+  display: none;
+}
+#invitation .box1.line {
+  padding: 0;
+  height: 15px;
+  background-color: #F2F2F2;
+}
+#invitation .container {
+  opacity: 0;
+  -webkit-animation: slideToTop .8s 0.2s ease both;
+  position: relative;
+  background-color: #ffffff;
+  height: 100%;
+  overflow-x: hidden;
+  text-align: center;
+}
+#invitation .container .bg {
+  max-height: 220px;
+  margin-bottom: 10px;
+}
+#invitation .container .bg.second {
+  margin-top: 80px;
+}
+#invitation .container .txt {
+  letter-spacing: 1px;
+}
+#invitation .container .txt.txt-one {
+  margin: 25px 0 10px 0;
+  font-size: 14px;
+}
+#invitation .container .txt.txt-two {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 5px;
+}
+#invitation .container .txt.txt-two > span {
+  color: #FA4535;
+}
+#invitation .container .btn {
+  margin: 0 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 45px;
+  font-size: 14px;
+  width: auto;
+  height: 45px;
+  line-height: 45px;
+  color: #ffffff;
+  border-radius: 10px;
+  background-color: rgba(250, 192, 46, 0.5);
+  border: none;
+}
+#invitation .container .btn > a {
+  color: #fff;
+}
+#invitation .container .btn.active {
+  background-color: #FAC02E;
+}
+#invitation .container.hide {
+  display: none;
+}
+@-webkit-keyframes slideToTop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}
+@media screen and (max-width: 320px) {
+  #invitation .container .bg {
+    max-height: 180px;
+    margin-bottom: 10px;
+  }
+  #invitation .container .bg.second {
+    margin-top: 70px;
+  }
+}

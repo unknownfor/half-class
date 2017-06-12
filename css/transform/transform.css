@@ -1,0 +1,31 @@
+/*
+transition-property: 过渡属性(默认值为all)
+transition-duration: 过渡持续时间(默认值为0s)
+transiton-timing-function: 过渡函数(默认值为ease函数)
+transition-delay: 过渡延迟时间(默认值为0s)
+*/
+.test {
+  height: 100px;
+  width: 100px;
+  background-color: pink;
+  /*以下三值为默认值 */
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.test.long {
+  /*代表持续时间为5s，延迟时间默认值0s,此处为3s*/
+  -webkit-transition: all 3s ease 0s;
+  transition: all 3s ease 0s;
+}
+.test.long:hover {
+  width: 500px;
+}
+/*
+none: 没有指定任何样式
+all: 默认值，表示指定元素所有支持transition-property属性的样式
+<transition-property>: 可过渡的样式，可用逗号分开写多个样式
+*/
